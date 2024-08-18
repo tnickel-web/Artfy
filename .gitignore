@@ -1,0 +1,58 @@
+# Node.js-Abhängigkeiten
+node_modules/
+
+# Log-Dateien
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Umgebungsdateien
+.env
+.env.*.local
+
+# Vite-Ausgabeverzeichnisse
+dist/
+
+# Lokale Umgebungen
+.vscode/
+.idea/
+
+# Temporäre Dateien
+*.tmp
+*.temp
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# SvelteKit spezifisch
+.svelte-kit/
+
+# Typescript spezifische Ausgaben
+*.tsbuildinfo
+
+# package-lock oder yarn.lock-Dateien
+# Diese Datei wird normalerweise versioniert, aber wenn du sie nicht versionieren möchtest, kannst du diese Zeile aktivieren
+# package-lock.json
+# yarn.lock
+
+# ESLint Caches
+.eslintcache
+
+# Jest Coverage Directory
+coverage/
+
+# Ignoriere alle Build-Artefakte
+build/
+out/
+
+# Optional: IntelliJ IDEA's project files
+# .idea/
+
+# Optional: MacOS speichert zusätzliche Metadaten zu Dateien, die sicher ignoriert werden können
+._*
+
+# Optional: Logs
+logs/
+*.log

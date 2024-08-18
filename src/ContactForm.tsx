@@ -1,12 +1,11 @@
-import React, {
-    useState,
-    ChangeEvent,
-    FormEvent,
-    useRef,
-    createRef,
-    LegacyRef,
-} from "react";
 import emailjs from "@emailjs/browser";
+import React, {
+    ChangeEvent,
+    createRef,
+    FormEvent,
+    LegacyRef,
+    useState,
+} from "react";
 
 interface FormData {
     name: string;
@@ -54,10 +53,10 @@ const ContactForm: React.FC = () => {
         if (formRef.current) {
             emailjs
                 .sendForm(
-                    "YOUR_SERVICE_ID", // Ersetze mit deinem Service ID
-                    "YOUR_TEMPLATE_ID", // Ersetze mit deinem Template ID
+                    "service_s6ys8bm", // Ersetze mit deinem Service ID
+                    "template_q3y24q7", // Ersetze mit deinem Template ID
                     formRef.current,
-                    "YOUR_USER_ID", // Ersetze mit deinem User ID
+                    "nkysHHR-G5zFYgiiN", // Ersetze mit deinem User ID
                 )
                 .then(
                     (result) => {
@@ -74,84 +73,99 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="space-y-4 max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg"
+        <section
+            id="contactForm"
+            className="relative bg-cover bg-center py-10 flex-grow"
         >
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Name</span>
-                </label>
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="input input-bordered w-full"
-                    required
-                />
-            </div>
+            <div className="max-w-full mx-24 p-8 bg-base-100 shadow-lg rounded-lg">
+                <h2 className="text-2xl font-bold mb-6 text-center">
+                    Kontaktformular
+                </h2>
+                <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="grid grid-cols-2 gap-4 max-w-lg mx-auto p-8 bg-base-100 shadow-lg rounded-lg"
+                >
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            className="input input-bordered w-full bg-amber-50"
+                            required
+                        />
+                    </div>
 
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Telefonnummer</span>
-                </label>
-                <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="input input-bordered w-full"
-                    required
-                />
-            </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Telefonnummer</span>
+                        </label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            className="input input-bordered w-full  bg-amber-50"
+                            required
+                        />
+                    </div>
 
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">E-Mail</span>
-                </label>
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="input input-bordered w-full"
-                    required
-                />
-            </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">E-Mail</span>
+                        </label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            className="input input-bordered w-full  bg-amber-50"
+                            required
+                        />
+                    </div>
 
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Idee</span>
-                </label>
-                <textarea
-                    name="idea"
-                    value={formData.idea}
-                    onChange={handleInputChange}
-                    className="textarea textarea-bordered w-full"
-                    required
-                ></textarea>
-            </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Idee</span>
+                        </label>
+                        <textarea
+                            name="idea"
+                            value={formData.idea}
+                            onChange={handleInputChange}
+                            className="textarea textarea-bordered w-full bg-amber-50"
+                            required
+                        ></textarea>
+                    </div>
 
-            <div className="form-control">
-                <label className="label">
-                    <span className="label-text">Bilder hochladen</span>
-                </label>
-                <input
-                    type="file"
-                    name="images"
-                    onChange={handleFileChange}
-                    className="file-input w-full"
-                    multiple
-                    accept="image/*"
-                />
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Bilder hochladen</span>
+                        </label>
+                        <input
+                            type="file"
+                            name="images"
+                            onChange={handleFileChange}
+                            className="file-input w-full"
+                            multiple
+                            accept="image/*"
+                        />
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button
+                        type="submit"
+                        className="btn btn-primary w-full mt-4"
+                    >
+                        Absenden
+                    </button>
+                </form>
             </div>
-
-            <button type="submit" className="btn btn-primary w-full mt-4">
-                Absenden
-            </button>
-        </form>
+        </section>
     );
 };
 

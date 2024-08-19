@@ -63,11 +63,20 @@ function Navigation() {
 
 function MainContent() {
     return (
-        <>
-            <UeberMich />
-            <Galery />
-            <ContactForm />
-        </>
+        <div
+            className="w-30 min-h-screen bg-cover bg-center"
+            style={{
+                backgroundImage: "url('./src/assets/striche.png')",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
+            <div className="bg-black bg-opacity-50 min-h-screen">
+                <UeberMich />
+                <Galery />
+                <ContactForm />
+            </div>
+        </div>
     );
 }
 

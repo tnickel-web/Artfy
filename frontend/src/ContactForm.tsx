@@ -7,23 +7,26 @@ import React, {
     useState,
 } from "react";
 
-interface FormData {
+interface CustomFormData extends FormData {
     name: string;
     phone: string;
     email: string;
     idea: string;
-    images: FileList | null;
+    image: String;
 }
 
 const ContactForm: React.FC = () => {
-    const formRef: LegacyRef<HTMLFormElement> = createRef();
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<CustomFormData>({
+        ...new FormData(),
+
         name: "",
         phone: "",
         email: "",
         idea: "",
-        images: null,
+        image: "",
     });
+
+    const formRef: LegacyRef<HTMLFormElement> = createRef();
 
     const handleInputChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -33,27 +36,41 @@ const ContactForm: React.FC = () => {
     };
 
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, images: e.target.files });
+        Array.from(e.target.files ?? []).map(async (file: File) => {
+            if (file.size <= 50 * 1024) {
+                setFormData({
+                    ...formData,
+                    image: e.target.files
+                        ? await fileToBase64(e.target.files[0])
+                        : "",
+                });
+            } else {
+                alert(
+                    `Datei ${file.name} wurde nicht hinzugefügt, da die Gesamtgröße von 50kb überschritten würde.`,
+                );
+            }
+        });
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    function fileToBase64(file: File): Promise<string> {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                resolve((reader?.result as string).split(",")[1]);
+            };
+            reader.onerror = (error) => {
+                reject(error);
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const form = new FormData();
-        form.append("name", formData.name);
-        form.append("phone", formData.phone);
-        form.append("email", formData.email);
-        form.append("idea", formData.idea);
-
-        if (formData.images) {
-            Array.from(formData.images).forEach((image) => {
-                form.append("images", image);
-            });
-        }
         if (formRef.current) {
             emailjs
                 .sendForm(
-                    "service_s6ys8bm", // Ersetze mit deinem Service ID
+                    "service_csedk0c", // Ersetze mit deinem Service ID
                     "template_q3y24q7", // Ersetze mit deinem Template ID
                     formRef.current,
                     "nkysHHR-G5zFYgiiN", // Ersetze mit deinem User ID

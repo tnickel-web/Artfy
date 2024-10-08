@@ -19,9 +19,9 @@ const Galery = () => {
     return (
         <section
             id="galery"
-            className="relative bg-cover bg-center py-10 flex-grow"
+            className="relative bg-cover bg-center py-10 flex-grow w-full"
         >
-            <div className="max-w-full mx-24 p-4 bg-base-100 shadow-lg rounded-lg">
+            <div className="mx-24 p-4 bg-base-100 shadow-lg rounded-lg">
                 <h2 className="text-2xl font-bold mb-4 text-center">Galery</h2>
                 <div className="carousel w-full h-64 pb-4 relative">
                     <div

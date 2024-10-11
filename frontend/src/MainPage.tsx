@@ -2,7 +2,6 @@ import "./assets/tammi.jpg";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
-import { UeberMich } from "./UberMich";
 
 function App() {
     return (
@@ -25,15 +24,11 @@ function Header() {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <h1 className="text-7xl font-serif text-secondary">Artfy</h1>
-            <div className="absolute right-10">
-                <img
-                    src="./src/assets/tammi.jpg"
-                    alt="Profilbild"
-                    className="w-40 h-40 rounded-full object-cover border-2 border-secondary shadow-lg"
-                    style={{ objectPosition: "top center" }}
-                />
-            </div>
+            <img
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+                src="./src/assets/Header.png"
+                alt="Beschreibung"
+            ></img>
         </header>
     );
 }

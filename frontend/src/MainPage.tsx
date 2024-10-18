@@ -17,7 +17,7 @@ function App() {
 function Header() {
     return (
         <header
-            className="relative flex justify-center py-20 items-center bg-cover bg-center"
+            className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
             style={{
                 backgroundImage: "url('./src/assets/whale.jpg')",
                 backgroundSize: "cover",
@@ -25,8 +25,13 @@ function Header() {
             }}
         >
             <img
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+                className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
                 src="./src/assets/Header.png"
+                alt="Beschreibung"
+            ></img>
+            <img
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+                src="./src/assets/titel_unter.png"
                 alt="Beschreibung"
             ></img>
         </header>
@@ -69,7 +74,7 @@ function MainContent() {
             }}
         >
             <div className="bg-black bg-opacity-50 min-h-screen w-full flex flex-col justify-center items-center">
-                <div className="w-2/3">
+                <div className="lg:1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
                     <Me />
                     <Galery />
                     <ContactForm />
@@ -82,10 +87,59 @@ function MainContent() {
 function Footer() {
     return (
         <footer id="footer" className="bg-neutral text-neutral-content py-6">
-            <div className="max-w-7xl mx-auto px-4 text-center">
-                <p>&copy; 2024 Mein Name. Alle Rechte vorbehalten.</p>
-                <p>Impressum: Hier stehen die Impressumsdaten...</p>
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="mt-4 flex flex-wrap">
+                    <div className="w-full md:w-1/3 mb-4 text-left">
+                        <h3 className="text-lg font-semibold">Impressum</h3>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Name:</h4>
+                            <p>Tamara Arkova</p>
+                        </div>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Anschrift:</h4>
+                            <p>
+                                Meyerstraße 31 / 33, 28201 Bremen, Deutschland
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="w-full md:w-1/3 mb-4 text-left">
+                        <h3 className="text-lg font-semibold">Kontakt</h3>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Telefon:</h4>
+                            <p>+49 176 20687232</p>
+                        </div>
+                        <div className="mb-2">
+                            <h4 className="font-medium">E-Mail:</h4>
+                            <p>T.akova@artfy-hb.de</p>
+                        </div>
+                    </div>
+
+                    <div className="w-full md:w-1/3 mb-4 text-left">
+                        <h3 className="text-lg font-semibold">
+                            Weitere Informationen
+                        </h3>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Beruf:</h4>
+                            <p>Freie Künstlerin</p>
+                        </div>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Art der Website:</h4>
+                            <p>
+                                Präsentation von Kunstwerken und
+                                Terminvereinbarung
+                            </p>
+                        </div>
+                        <div className="mb-2">
+                            <h4 className="font-medium">Handelsregister:</h4>
+                            <p>Amtsgericht Bremen HRB 29465</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <p className="text-center">
+                &copy; 2024 Tamara Arkova. Alle Rechte vorbehalten.
+            </p>
         </footer>
     );
 }

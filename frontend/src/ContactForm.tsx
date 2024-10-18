@@ -18,19 +18,27 @@ const ContactForm: React.FC = () => {
         email: "",
         idea: "",
     });
+    const [formError, setFormError] = useState("");
 
     const formRef: LegacyRef<HTMLFormElement> = createRef();
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        if (formRef.current && isChecked) {
+        const phoneOrEmailMissing: boolean = !formData.phone && !formData.email;
+        if (!isChecked) {
+            setFormError("Bitte stimmen Sie der Datenverarbeitung zu.");
+        } else if (phoneOrEmailMissing) {
+            setFormError(
+                "Es muss entweder eine Email oder Telefonnummer angegeben werden",
+            );
+        } else if (formRef.current) {
+            setFormError("");
             emailjs
                 .sendForm(
-                    "service_csedk0c",
-                    "template_q3y24q7",
+                    import.meta.env.VITE_SERVICE_ID,
+                    import.meta.env.VITE_TEMPLATE_ID,
                     formRef.current,
-                    "nkysHHR-G5zFYgiiN",
+                    import.meta.env.VITE_OPTIONS,
                 )
                 .then(
                     (_) => {
@@ -84,14 +92,14 @@ const ContactForm: React.FC = () => {
                 id="contactForm"
                 className="relative bg-cover bg-center py-10 flex-grow"
             >
-                <div className="max-w-full mx-24 p-8 bg-base-100 shadow-lg rounded-lg">
+                <div className="max-w-full p-8 bg-base-100 shadow-lg rounded-lg">
                     <h2 className="text-2xl font-bold mb-6 text-center">
                         Kontaktformular
                     </h2>
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
-                        className="grid grid-cols-2 gap-4 max-w-lg mx-auto p-8 bg-base-100 shadow-lg rounded-lg"
+                        className="grid grid-cols-2 gap-4 max-w-xl mx-auto p-8 bg-base-100 shadow-lg rounded-lg"
                     >
                         <div className="form-control">
                             <label className="label">
@@ -118,7 +126,6 @@ const ContactForm: React.FC = () => {
                                 value={formData.phone}
                                 onChange={handleInputChange}
                                 className="input input-bordered w-full bg-amber-50"
-                                required
                             />
                         </div>
                         <div className="form-control">
@@ -131,7 +138,6 @@ const ContactForm: React.FC = () => {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 className="input input-bordered w-full bg-amber-50"
-                                required
                             />
                         </div>
                         <div className="form-control">
@@ -169,6 +175,11 @@ const ContactForm: React.FC = () => {
                         >
                             Absenden
                         </button>
+                        {formError && (
+                            <p className="text-red-500 mt-3 ml-2">
+                                {formError}
+                            </p>
+                        )}
                     </form>
                 </div>
                 <Toaster />

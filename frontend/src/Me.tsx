@@ -1,9 +1,9 @@
 export const Me = () => {
     return (
         <section className="relative bg-cover bg-center py-10 flex-grow w-full">
-            <div className="mx-24 p-4 bg-base-100 shadow-lg rounded-lg">
+            <div className=" p-4 bg-base-100 shadow-lg rounded-lg">
                 <h2 className="text-2xl font-bold mb-6 text-center">Moin</h2>
-                <div className="grid grid-cols-3 gap-8 text-lg">
+                <div className="pl-9 pr-3 grid grid-cols-3 gap-8 text-lg">
                     <div className="col-span-3">
                         <p>
                             Schön, dass du auf meiner Webseite gelandet bist!

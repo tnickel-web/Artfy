@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite build output
+dist/
+.vite/
+.cache/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Tailwind CSS
+.tailwind/
+
+# IDE specific
+.vscode/
+.idea/
+
+# macOS specific
+.DS_Store
+
+# Linux specific
+*.swp
+
+# Coverage directory used by testing tools
+coverage/
+
+# Temp files created by editors
+*.tmp
+*.temp
+
+# Optional npm cache directory
+.npm/
+
+# Optional yarn cache directory
+.pnp.*

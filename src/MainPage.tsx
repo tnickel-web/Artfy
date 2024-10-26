@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
 
 function App(): React.ReactElement {
-  useEffect(() => window.scrollTo(0, 0), []);
   return (
     <div className="bg-base-200 min-h-screen flex flex-col">
       <Header />
@@ -18,6 +17,7 @@ function App(): React.ReactElement {
 function Header() {
   return (
     <header
+      id="header"
       className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
       style={{
         backgroundImage: `url('whale.jpg')`,
@@ -45,6 +45,9 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center">
           <ul className="menu menu-horizontal p-0 space-x-4">
+            <li>
+              <a href="#"></a>
+            </li>
             <li>
               <a href="#aboutMe">Über mich</a>
             </li>

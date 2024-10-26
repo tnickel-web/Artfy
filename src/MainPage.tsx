@@ -1,7 +1,7 @@
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
-import whale from "./src/assets/images/whale.jpg"
+import whaleImage from '@/assets/images/whale.jpg';
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function Header() {
         <header
             className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
             style={{
-                backgroundImage: `${whale}`,
+                backgroundImage: `${whaleImage}`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

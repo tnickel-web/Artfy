@@ -5,4 +5,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     base: "/Artfy/",
     plugins: [react()],
+    build: {
+        rollupOptions: {
+            external: [], // Hier kannst du Module angeben, die extern sein sollen
+        }
+    },
 });

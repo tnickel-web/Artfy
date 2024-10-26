@@ -26,7 +26,7 @@ function Header() {
         >
             <img
                 className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-                src="./assets/images/Header.png"
+                src="Header.png"
                 alt="Beschreibung"
             ></img>
             <img

@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 const Galery = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState<string>();
     const slides = [
         "./src/assets/bilder/octopus.jpg",
         "./src/assets/bilder/sunflower.jpg",
@@ -19,12 +19,12 @@ const Galery = () => {
         setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     };
 
-    const openOverlay = (image) => {
+    const openOverlay = (image: string) => {
         setSelectedImage(image);
     };
 
     const closeOverlay = () => {
-        setSelectedImage(null);
+        setSelectedImage(undefined);
     };
 
     return (

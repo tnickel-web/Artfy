@@ -2,7 +2,7 @@ import React from "react";
 
 export const Me = () => {
     return (
-        <section className="relative bg-cover bg-center py-10 flex-grow w-full">
+        <section id="aboutMe" className="relative bg-cover bg-center py-10 flex-grow w-full">
             <div className=" p-4 bg-base-100 shadow-lg rounded-lg">
                 <h2 className="text-2xl font-bold mb-6 text-center">Moin</h2>
                 <div className="pl-9 pr-3 grid grid-cols-3 gap-8 text-lg">

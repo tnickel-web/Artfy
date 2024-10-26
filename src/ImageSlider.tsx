@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
 const Galery = () => {
     const [currentSlide, setCurrentSlide] = useState(0);

@@ -16,26 +16,27 @@ function App(): React.ReactElement {
 
 function Header() {
   return (
-    <header
-      id="header"
-      className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
-      style={{
-        backgroundImage: `url('whale.jpg')`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <img
-        className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-        src="Header.png"
-        alt="Beschreibung"
-      ></img>
-      <img
-        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-        src="titel_unter.png"
-        alt="Beschreibung"
-      ></img>
-    </header>
+    <section id="header">
+      <header
+        className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
+        style={{
+          backgroundImage: `url('whale.jpg')`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img
+          className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+          src="Header.png"
+          alt="Beschreibung"
+        ></img>
+        <img
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+          src="titel_unter.png"
+          alt="Beschreibung"
+        ></img>
+      </header>
+    </section>
   );
 }
 

@@ -1,4 +1,3 @@
-import "./assets/tammi.jpg";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";

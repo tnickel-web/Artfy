@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
 import whaleImage from './assets/images/whale.jpg?url';
-import header from "./assets/images/Header.png"
+import "./assets/images/Header.png"
 
 function App(): React.ReactElement {
     return (

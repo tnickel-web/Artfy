@@ -79,7 +79,7 @@ function MainContent() {
       }}
     >
       <div className="bg-black bg-opacity-50 min-h-screen w-full flex flex-col justify-center items-center">
-        <div className="lg:1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
+        <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
           <Me />
           <Galery />
           <ContactForm />

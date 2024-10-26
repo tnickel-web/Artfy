@@ -1,7 +1,7 @@
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
-import whale from "./whale.png"
+import whale from "./whale.jpg"
 
 function App() {
     return (

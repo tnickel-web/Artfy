@@ -67,7 +67,7 @@ function MainContent() {
         <div
             className="w-30 min-h-screen bg-cover bg-center"
             style={{
-                backgroundImage: "url('./public/images/striche.png')",
+                backgroundImage: "url('/images/striche.png')",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

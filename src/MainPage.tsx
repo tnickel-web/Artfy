@@ -3,6 +3,7 @@ import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
 import whaleImage from './assets/images/whale.jpg?url';
+import header from "./assets/images/Header.png"
 
 function App(): React.ReactElement {
     return (
@@ -27,7 +28,7 @@ function Header() {
         >
             <img
                 className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-                src="./public/images/Header.png"
+                src="./assets/images/Header.png"
                 alt="Beschreibung"
             ></img>
             <img

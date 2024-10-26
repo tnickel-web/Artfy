@@ -18,7 +18,7 @@ function Header() {
         <header
             className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
             style={{
-                backgroundImage: "url('whale.jpg')",
+                backgroundImage: "url('/images/bilder/whale.jpg')",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

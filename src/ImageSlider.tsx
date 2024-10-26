@@ -5,11 +5,11 @@ const Galery = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [selectedImage, setSelectedImage] = useState<string>();
     const slides = [
-        "./public/images/bilder/octopus.jpg",
-        "./public/images/bilder/sunflower.jpg",
-        "./public/images/bilder/unicorn.jpg",
-        "./public/images/bilder/whale.jpg",
-        "./public/images/bilder/women.jpg",
+        "octopus.jpg",
+        "sunflower.jpg",
+        "unicorn.jpg",
+        "whale.jpg",
+        "women.jpg",
     ];
 
     const nextSlide = () => {

@@ -1,7 +1,8 @@
+import React from "react";
 import "./App.css";
 import MainPage from "./MainPage";
 
-function App() {
+function App(): React.ReactElement{
     return <MainPage />;
 }
 

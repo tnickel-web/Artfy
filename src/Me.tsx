@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Me = () => {
     return (
         <section className="relative bg-cover bg-center py-10 flex-grow w-full">

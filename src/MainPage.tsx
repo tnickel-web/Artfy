@@ -1,9 +1,10 @@
+import React from "react";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
 import whaleImage from './assets/images/whale.jpg?url';
 
-function App() {
+function App(): React.ReactElement {
     return (
         <div className="bg-base-200 min-h-screen flex flex-col">
             <Header />

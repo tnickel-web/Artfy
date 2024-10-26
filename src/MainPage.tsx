@@ -19,19 +19,19 @@ function Header() {
         <header
             className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
             style={{
-                backgroundImage: "url('./src/assets/whale.jpg')",
+                backgroundImage: "url('./public/images/whale.jpg')",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
         >
             <img
                 className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-                src="./src/assets/Header.png"
+                src="./public/images/Header.png"
                 alt="Beschreibung"
             ></img>
             <img
                 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-                src="./src/assets/titel_unter.png"
+                src="./public/images/titel_unter.png"
                 alt="Beschreibung"
             ></img>
         </header>
@@ -68,7 +68,7 @@ function MainContent() {
         <div
             className="w-30 min-h-screen bg-cover bg-center"
             style={{
-                backgroundImage: "url('./src/assets/striche.png')",
+                backgroundImage: "url('./public/images/striche.png')",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

@@ -4,11 +4,11 @@ const Galery = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [selectedImage, setSelectedImage] = useState<string>();
     const slides = [
-        "./src/assets/bilder/octopus.jpg",
-        "./src/assets/bilder/sunflower.jpg",
-        "./src/assets/bilder/unicorn.jpg",
-        "./src/assets/bilder/whale.jpg",
-        "./src/assets/bilder/women.jpg",
+        "./public/images/bilder/octopus.jpg",
+        "./public/images/bilder/sunflower.jpg",
+        "./public/images/bilder/unicorn.jpg",
+        "./public/images/bilder/whale.jpg",
+        "./public/images/bilder/women.jpg",
     ];
 
     const nextSlide = () => {

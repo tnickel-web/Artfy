@@ -27,7 +27,7 @@ export const Me = () => {
                     </div>
                     <div>
                         <img
-                            src="./src/assets/tammi.jpg"
+                            src="./public/images/tammi.jpg"
                             alt="Profilbild"
                             className="w-40 h-40 rounded-full object-cover border-2 border-secondary shadow-lg my-6 self-center"
                         />

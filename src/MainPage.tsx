@@ -2,8 +2,6 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
-import whaleImage from './assets/images/whale.jpg?url';
-import "./assets/images/Header.png"
 
 function App(): React.ReactElement {
     return (
@@ -21,7 +19,7 @@ function Header() {
         <header
             className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
             style={{
-                backgroundImage: `${whaleImage}`,
+                backgroundImage: `/whale.jpg`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}

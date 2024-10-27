@@ -34,7 +34,7 @@ const Galery = () => {
             className="relative bg-cover bg-center py-10 flex-grow w-full"
         >
             <div className="p-4 bg-base-100 shadow-lg rounded-lg">
-                <h2 className="text-2xl font-bold mb-4 text-center">Galery</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
                 <div className="carousel w-full h-96 pb-4 relative">
                     <div
                         className="carousel-inner flex transition-transform duration-500"

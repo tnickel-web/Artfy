@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
                 className="relative bg-cover bg-center py-10 flex-grow"
             >
                 <div className="max-w-full md:p-8 lg:p-8 xl:p-8 bg-base-100 shadow-lg rounded-lg">
-                    <h2 className="text-2xl font-bold mb-6 text-center">
+                    <h2 className="text-2xl font-bold mb-6 text-center pt-4">
                         Kontaktformular
                     </h2>
                     <form

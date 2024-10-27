@@ -5,7 +5,11 @@ import { Me } from "./Me";
 
 function App(): React.ReactElement {
   return (
-    <div className="bg-base-200 min-h-screen flex flex-col">
+    <div style={{
+        backgroundImage: "url('background_horizontal.png')",
+        backgroundRepeat: "repeat-y",
+        backgroundSize: "100% auto",
+      }}  className="bg-base-200 min-h-screen flex flex-col">
       <Header />
       <Navigation />
       <MainContent />
@@ -19,11 +23,7 @@ function Header() {
     <section id="header">
       <header
         className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
-        style={{
-          backgroundImage: `url('whale.jpg')`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        
       >
         <img
           className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
@@ -42,7 +42,7 @@ function Header() {
 
 function Navigation() {
   return (
-    <nav className="bg-base-300 shadow-lg fixed z-50">
+    <nav className="bg-base-200 shadow-lg fixed z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center">
           <ul className="menu menu-horizontal p-0 space-x-4">
@@ -50,7 +50,7 @@ function Navigation() {
               <a href="#aboutMe">Über mich</a>
             </li>
             <li>
-              <a href="#galery">Galery</a>
+              <a href="#galery">Galerie</a>
             </li>
             <li>
               <a href="#contactForm">Termin vereinbaren</a>
@@ -67,15 +67,8 @@ function Navigation() {
 
 function MainContent() {
   return (
-    <div
-      className="w-30 min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: "url('striche.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="bg-black bg-opacity-50 min-h-screen w-full flex flex-col justify-center items-center">
+    <div className="w-30 min-h-screen bg-cover bg-center">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center">
         <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
           <Me />
           <Galery />
@@ -130,7 +123,7 @@ function Footer() {
         </div>
       </div>
       <p className="text-center">
-        &copy; 2024 Tamara Arkova. Alle Rechte vorbehalten.
+        &copy; 2024 Tamara Akova. Alle Rechte vorbehalten.
       </p>
     </footer>
   );

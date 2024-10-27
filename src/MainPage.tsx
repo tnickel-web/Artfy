@@ -47,9 +47,6 @@ function Navigation() {
         <div className="flex justify-center">
           <ul className="menu menu-horizontal p-0 space-x-4">
             <li>
-              <a href="#header"></a>
-            </li>
-            <li>
               <a href="#aboutMe">Über mich</a>
             </li>
             <li>

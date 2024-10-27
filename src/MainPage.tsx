@@ -95,7 +95,7 @@ function Footer() {
             <h3 className="text-lg font-semibold">Impressum</h3>
             <div className="mb-2">
               <h4 className="font-medium">Name:</h4>
-              <p>Tamara Arkova</p>
+              <p>Tamara Akova</p>
             </div>
             <div className="mb-2">
               <h4 className="font-medium">Anschrift:</h4>
@@ -111,7 +111,7 @@ function Footer() {
             </div>
             <div className="mb-2">
               <h4 className="font-medium">E-Mail:</h4>
-              <p>T.akova@artfy-hb.de</p>
+              <p>t.akova@artfy-hb.de</p>
             </div>
           </div>
 

@@ -33,7 +33,6 @@ const ContactForm: React.FC = () => {
       );
     } else if (formRef.current) {
       setFormError("");
-      console.log(import.meta.env.VITE_SERVICE_ID);
       emailjs
         .sendForm(
           import.meta.env.VITE_SERVICE_ID,
@@ -52,7 +51,8 @@ const ContactForm: React.FC = () => {
               duration: 5000,
             });
           },
-          (_) => {
+          (error) => {
+            console.log(error)
             toast.error(
               "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an t.akova@artfy-hb.de.",
               {

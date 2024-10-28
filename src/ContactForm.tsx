@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
           },
           (_) => {
             toast.error(
-              "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an T.akova@artfy-hb.de.",
+              "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an t.akova@artfy-hb.de.",
               {
                 style: {
                   background: "bg-base-300", // Beispiel für Tailwind-Farbe

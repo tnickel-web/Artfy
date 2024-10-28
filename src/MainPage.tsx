@@ -2,14 +2,18 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
+import Navigation from "./Navigation";
 
 function App(): React.ReactElement {
   return (
-    <div style={{
+    <div
+      style={{
         backgroundImage: "url('background_horizontal.png')",
         backgroundRepeat: "repeat-y",
         backgroundSize: "100% auto",
-      }}  className="bg-base-200 min-h-screen flex flex-col">
+      }}
+      className="bg-base-200 min-h-screen flex flex-col"
+    >
       <Header />
       <Navigation />
       <MainContent />
@@ -21,12 +25,9 @@ function App(): React.ReactElement {
 function Header() {
   return (
     <section id="header">
-      <header
-        className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center"
-        
-      >
+      <header className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center">
         <img
-          className=" w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+          className="mt-14 sm:mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
           src="Header.png"
           alt="Beschreibung"
         ></img>
@@ -40,30 +41,7 @@ function Header() {
   );
 }
 
-function Navigation() {
-  return (
-    <nav className="bg-base-200 shadow-lg fixed z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-center">
-          <ul className="menu menu-horizontal p-0 space-x-4">
-            <li>
-              <a href="#aboutMe">Über mich</a>
-            </li>
-            <li>
-              <a href="#galery">Galerie</a>
-            </li>
-            <li>
-              <a href="#contactForm">Termin vereinbaren</a>
-            </li>
-            <li>
-              <a href="#footer">Impressum</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-}
+
 
 function MainContent() {
   return (

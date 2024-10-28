@@ -16,8 +16,8 @@ export const Me = () => {
               dir, was ich Kreatives mache und wie du mich erreichen kannst.
             </p>
             <p className="mb-4">
-              Als erfahrene Malermeisterin und Künstlerin weiß ich, wie ich mit
-              Farben und Formen umgehe, um aus einer schlichten Fläche ein
+              Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich mit
+              Untergrund, Farben und Formen umgehe, um aus einer schlichten Fläche ein
               Kunstwerk zu zaubern. Egal, ob du schon eine klare Idee hast oder
               mir gestalterische Freiheit lässt – wir arbeiten Hand in Hand, um
               ein Ergebnis zu schaffen, das perfekt zu dir und deinem Raum
@@ -64,7 +64,7 @@ export const Me = () => {
               Atelier eröffnete. Dieser kreative Ort hat mich inspiriert und
               bestärkt, meiner Leidenschaft für Wandmalerei voll und ganz
               nachzugehen. Und hier bin ich, bereit, deine Wand in ein buntes
-              Kunstwerk zu verwandeln! :) 
+              Kunstwerk zu verwandeln!
 
             </p>
             <h2 className="text-xl font-bold mb-4">So wird deine Wand bunt</h2>
@@ -75,11 +75,6 @@ export const Me = () => {
               meine Vorschläge. Die Preise richten sich nach dem Aufwand, der
               Größe und dem Detailgrad des Projekts. Wenn alles passt, legen wir
               los und schon bald erstrahlt deine Wand in bunten Farben! :)
-            </p>
-            <p className="font-bold mb-4">
-              Bunte Grüße
-              <br />
-              Tamara Akova
             </p>
           </div>
         </div>

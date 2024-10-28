@@ -33,6 +33,7 @@ const ContactForm: React.FC = () => {
       );
     } else if (formRef.current) {
       setFormError("");
+      console.log(import.meta.env.VITE_SERVICE_ID);
       emailjs
         .sendForm(
           import.meta.env.VITE_SERVICE_ID,

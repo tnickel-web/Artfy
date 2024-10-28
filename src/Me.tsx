@@ -74,7 +74,7 @@ export const Me = () => {
               unverbindlichen Termin aus und besprechen in Ruhe deine Ideen und
               meine Vorschläge. Die Preise richten sich nach dem Aufwand, der
               Größe und dem Detailgrad des Projekts. Wenn alles passt, legen wir
-              los und schon bald erstrahlt deine Wand in bunten Farben! :)
+              los und schon bald erstrahlt deine Wand in bunten Farben!
             </p>
           </div>
         </div>

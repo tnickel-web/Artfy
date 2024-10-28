@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
             });
           },
           (error) => {
-            console.log(error)
+            console.log("Error" + error)
             toast.error(
               "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an t.akova@artfy-hb.de.",
               {

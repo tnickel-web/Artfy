@@ -16,4 +16,9 @@ export default defineConfig({
           '@': resolve(__dirname, 'src'),  // Alias für den src-Ordner
         },
       },
+      define: {
+        'import.meta.env.VITE_SERVICE_ID': JSON.stringify(process.env.VITE_SERVICE_ID),
+        'import.meta.env.VITE_TEMPLATE_ID': JSON.stringify(process.env.VITE_TEMPLATE_ID),
+        'import.meta.env.VITE_OPTIONS': JSON.stringify(process.env.VITE_OPTIONS),
+      },
 });

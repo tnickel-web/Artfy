@@ -49,7 +49,7 @@ export const Me = () => {
             <img
               src="tammi.jpg"
               alt="Profilbild"
-              className="w-40 h-40 rounded-full object-cover border-2 border-secondary shadow-lg my-6 self-center"
+              className="w-40 h-40 rounded-full object-cover border-2 border-orange-300 shadow-lg my-6 self-center"
             />
           </div>
 

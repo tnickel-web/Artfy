@@ -1,9 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Galery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedImage, setSelectedImage] = useState<string>();
+
   const slides = [
     "bilder/rochen.jpg",
     "bilder/octopus.jpg",
@@ -14,11 +14,11 @@ const Galery = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrentSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1);
   };
 
   const openOverlay = (image: string) => {
@@ -51,7 +51,7 @@ const Galery = () => {
               >
                 <img
                   src={slide}
-                  className="w-full h-full object-contain cursor-pointer"
+                  className="w-full h-full object-contain cursor-pointer pb-3 shadow-lg"
                   alt={`Slide ${index + 1}`}
                 />
               </div>
@@ -59,13 +59,28 @@ const Galery = () => {
           </div>
 
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full">
-            <button onClick={prevSlide} className="btn btn-circle">
+            <button onClick={prevSlide} className="btn btn-circle shadow-lg">
               ❮
             </button>
-            <button onClick={nextSlide} className="btn btn-circle mr-10">
+            <button onClick={nextSlide} className="btn btn-circle mr-10 shadow-lg">
               ❯
             </button>
           </div>
+        </div>
+        <div className="flex justify-center mt-4">
+          {Array.from({ length: slides.length }).map((_, index) => (
+            <span
+              key={"slide" + index}
+              className={`w-3 h-3 rounded-full mx-1 cursor-pointer transition-transform duration-300 shadow-lg ${
+                currentSlide === index
+                  ? "bg-orange-500 h-6 w-6 transform -translate-y-2"
+                  : "bg-gray-400"
+              }`}
+              onClick={() => {
+                setCurrentSlide(index);
+              }}
+            ></span>
+          ))}
         </div>
       </div>
 

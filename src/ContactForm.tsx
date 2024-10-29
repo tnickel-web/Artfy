@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
             });
           },
           (error) => {
-            console.log("Error" + error)
+            console.log("Error" + error);
             toast.error(
               "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an t.akova@artfy-hb.de.",
               {
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="grid grid-cols-2 gap-4 max-w-xl mx-auto p-8 bg-base-100 shadow-lg rounded-lg"
+            className="grid grid-cols-2 gap-4 max-w-xl mx-auto p-8 bg-base-100 rounded-lg"
           >
             <div className="form-control">
               <label htmlFor="name" className="label">
@@ -162,12 +162,14 @@ const ContactForm: React.FC = () => {
                 id="dataProcessing"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
-                className="mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="mr-2 transform -translate-y-5 md:-translate-y-3  h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
               />
-              <label htmlFor="dataProcessing" className="text-gray-700 mt-6">
-                Ich bin damit einverstanden, dass meine personenbezogenen Daten
-                verarbeitet werden.
-              </label>
+              <div className="">
+                <label htmlFor="dataProcessing" className="text-gray-700 mt-6">
+                  Ich bin damit einverstanden, dass meine personenbezogenen
+                  Daten verarbeitet werden.
+                </label>
+              </div>
             </div>
             <button type="submit" className="btn btn-primary w-full mt-4">
               Absenden

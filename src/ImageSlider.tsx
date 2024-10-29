@@ -51,7 +51,7 @@ const Galery = () => {
               >
                 <img
                   src={slide}
-                  className="w-full h-full object-contain cursor-pointer pb-3 shadow-lg"
+                  className="w-full h-full object-contain cursor-pointer pb-3"
                   alt={`Slide ${index + 1}`}
                 />
               </div>

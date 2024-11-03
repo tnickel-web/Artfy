@@ -15,6 +15,13 @@ export const Me = () => {
               Schön, dass du auf meiner Webseite gelandet bist! Hier erzähle ich
               dir, was ich Kreatives mache und wie du mich erreichen kannst.
             </p>
+            <p>
+              Von gemütlichen Kinderzimmern über stilvolle Restaurants bis hin
+              zu modernen Einrichtungen: Ich biete Wandmalerei für die
+              unterschiedlichsten Räume und Anlässe an. Jede Fläche hat ihren
+              eigenen Charakter, und mit meiner Erfahrung und gezielter Farbwahl
+              bringe ich sie auf eine ganz besondere Weise zum Strahlen.
+            </p>
             <p className="mb-4">
               Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich mit
               Untergrund, Farben und Formen umgehe, um aus einer schlichten Fläche ein
@@ -22,13 +29,6 @@ export const Me = () => {
               mir gestalterische Freiheit lässt – wir arbeiten Hand in Hand, um
               ein Ergebnis zu schaffen, das perfekt zu dir und deinem Raum
               passt.
-            </p>
-            <p>
-              Von gemütlichen Kinderzimmern über stilvolle Restaurants bis hin
-              zu modernen Einrichtungen: Ich biete Wandmalerei für die
-              unterschiedlichsten Räume und Anlässe an. Jede Fläche hat ihren
-              eigenen Charakter, und mit meiner Erfahrung und gezielter Farbwahl
-              bringe ich sie auf eine ganz besondere Weise zum Strahlen.
             </p>
           </div>
 

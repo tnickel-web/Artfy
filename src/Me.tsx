@@ -15,14 +15,14 @@ export const Me = () => {
               Schön, dass du auf meiner Webseite gelandet bist! Hier erzähle ich
               dir, was ich Kreatives mache und wie du mich erreichen kannst.
             </p>
-            <p>
+            <p className="mb-4">
               Von gemütlichen Kinderzimmern über stilvolle Restaurants bis hin
               zu modernen Einrichtungen: Ich biete Wandmalerei für die
               unterschiedlichsten Räume und Anlässe an. Jede Fläche hat ihren
               eigenen Charakter, und mit meiner Erfahrung und gezielter Farbwahl
               bringe ich sie auf eine ganz besondere Weise zum Strahlen.
             </p>
-            <p className="mb-4">
+            <p>
               Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich mit
               Untergrund, Farben und Formen umgehe, um aus einer schlichten Fläche ein
               Kunstwerk zu zaubern. Egal, ob du schon eine klare Idee hast oder

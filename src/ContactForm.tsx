@@ -1,5 +1,11 @@
 import emailjs from "@emailjs/browser";
-import React, { createRef, FormEvent, LegacyRef, useState } from "react";
+import React, {
+  createRef,
+  FormEvent,
+  LegacyRef,
+  useEffect,
+  useState,
+} from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 interface CustomFormData extends FormData {
@@ -33,7 +39,6 @@ const ContactForm: React.FC = () => {
       );
     } else if (formRef.current) {
       setFormError("");
-      emailjs.init({ publicKey: import.meta.env.VITE_PUBLIC_KEY });
 
       emailjs
         .sendForm(

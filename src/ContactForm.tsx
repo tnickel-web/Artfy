@@ -37,9 +37,8 @@ const ContactForm: React.FC = () => {
         .sendForm(
           import.meta.env.VITE_SERVICE_ID,
           import.meta.env.VITE_TEMPLATE_ID,
-          import.meta.env.VITE_PUBLIC_KEY,
           formRef.current,
-          import.meta.env.VITE_OPTIONS
+          import.meta.env.VITE_PUBLIC_KEY
         )
         .then(
           (_) => {

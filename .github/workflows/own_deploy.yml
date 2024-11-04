@@ -64,3 +64,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: www.artfy-hb.de
+          VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
+          VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
+          VITE_OPTIONS: ${{ secrets.VITE_OPTIONS }}
+          VITE_PUBLIC_KEY: ${{ secrets.VITE_PUBLIC_KEY }}

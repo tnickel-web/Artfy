@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 function App(): React.ReactElement {
   useEffect(() => {
-    emailjs.init({ publicKey: import.meta.env.VITE_PUBLIC_KEY });
+    emailjs.init({ publicKey: "nkysHHR-G5zFYgiiN" });
   }, []);
   return <MainPage />;
 }

@@ -12,7 +12,8 @@ const CallOrCopyButton = () => {
   // Überprüfe, ob der Benutzer ein mobiles Gerät verwendet
   useEffect(() => {
     const userAgent = navigator.userAgent;
-    const mobileDevices = /Android|iPhone|iPad|iPod|Windows Phone/i;
+    const mobileDevices =
+      /Android|iPhone|iPad|iPod|Chrome Android|Firefox for Android|Opera Android|Safari on iOS|Samsung Internet|WebView Android|WebView Android|Windows Phone/i;
     setIsMobile(mobileDevices.test(userAgent));
   }, []);
 

@@ -33,20 +33,42 @@ const Navigation = () => {
 
         {/* Navigation Links */}
         <ul
-           className={`
+          className={`
             md:flex md:items-center md:space-x-4
             flex-col md:flex-row space-y-2 md:space-y-0 pt-2 md:pt-0
             transition-all duration-500 ease-out overflow-hidden
-            ${isOpen 
-              ? "max-h-[1000px] opacity-100 scale-y-100 origin-top" 
-              : "max-h-0 opacity-0 scale-y-0 origin-top"}
+            ${
+              isOpen
+                ? "max-h-[1000px] opacity-100 scale-y-100 origin-top"
+                : "max-h-0 opacity-0 scale-y-0 origin-top"
+            }
             md:max-h-full md:opacity-100 md:scale-y-100
           `}
         >
-          <ListItem href="#aboutMe" content="Über mich" index={1} isOpen={isOpen}></ListItem>
-          <ListItem href="#galery" content="Galerie" index={2} isOpen={isOpen}></ListItem>
-          <ListItem href="#contactForm" content="Termin vereinbaren" index={3} isOpen={isOpen}></ListItem>
-          <ListItem href="#footer" content="Impressum" index={4} isOpen={isOpen}></ListItem>
+          <ListItem
+            href="#aboutMe"
+            content="Über mich"
+            index={1}
+            isOpen={isOpen}
+          ></ListItem>
+          <ListItem
+            href="#instaFeed"
+            content="Instagram"
+            index={2}
+            isOpen={isOpen}
+          ></ListItem>
+          <ListItem
+            href="#contactForm"
+            content="Termin vereinbaren"
+            index={3}
+            isOpen={isOpen}
+          ></ListItem>
+          <ListItem
+            href="#footer"
+            content="Impressum"
+            index={4}
+            isOpen={isOpen}
+          ></ListItem>
         </ul>
       </div>
     </nav>

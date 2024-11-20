@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import CallOrCopyButton from "./CallOrCopyButton";
 
 interface CustomFormData extends FormData {
   name: string;
@@ -181,6 +182,7 @@ const ContactForm: React.FC = () => {
             <button type="submit" className="btn btn-primary w-full mt-4">
               Absenden
             </button>
+            <CallOrCopyButton />
             {formError && <p className="text-red-500 mt-3 ml-2">{formError}</p>}
           </form>
         </div>

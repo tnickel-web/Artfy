@@ -3,6 +3,9 @@ import ContactForm from "./ContactForm";
 import Galery from "./ImageSlider";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
+import { InstagramEmbed } from "react-social-media-embed";
+import InstagramFeed from "./InstagramFeed";
+import CookieBanner from "./CookieBanner";
 
 function App(): React.ReactElement {
   return (
@@ -14,6 +17,7 @@ function App(): React.ReactElement {
       }}
       className="bg-base-200 min-h-screen flex flex-col"
     >
+      <CookieBanner />
       <Header />
       <Navigation />
       <MainContent />
@@ -41,15 +45,13 @@ function Header() {
   );
 }
 
-
-
 function MainContent() {
   return (
     <div className="w-30 min-h-screen bg-cover bg-center">
       <div className="min-h-screen w-full flex flex-col justify-center items-center">
         <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
           <Me />
-          <Galery />
+          <InstagramFeed />
           <ContactForm />
         </div>
       </div>

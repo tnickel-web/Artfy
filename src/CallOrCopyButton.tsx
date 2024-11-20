@@ -30,6 +30,10 @@ const CallOrCopyButton = () => {
     }
   }, [animate]);
 
+  useEffect(() => {
+    setButtonText(isMobile ? "Mich anrufen" : "Nummer kopieren");
+  }, [isMobile]);
+
   const handleButtonClick = () => {
     if (isMobile) {
       // Auf mobilen Geräten die Telefonnummer anrufen

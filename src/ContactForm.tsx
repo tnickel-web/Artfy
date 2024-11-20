@@ -7,7 +7,6 @@ import React, {
   useState,
 } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import CallOrCopyButton from "./CallOrCopyButton";
 import SocialContactButtons from "./SocialContactButtons";
 import PersonalInformation from "./PersonalInformation";
 

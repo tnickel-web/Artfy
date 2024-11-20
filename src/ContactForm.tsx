@@ -104,7 +104,7 @@ const ContactForm: React.FC = () => {
       >
         <div className="max-w-full bg-base-100 shadow-lg rounded-lg">
           <h2 className=" pt-4 text-2xl font-bold  text-center ">
-            Wie du mich erreichst
+            So erreichst du mich
           </h2>
           <div className="flex items-center justify-center pt-5">
             <SocialContactButtons />

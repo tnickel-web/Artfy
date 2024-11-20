@@ -1,11 +1,8 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import Galery from "./ImageSlider";
+import InstagramFeed from "./InstagramFeed";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
-import { InstagramEmbed } from "react-social-media-embed";
-import InstagramFeed from "./InstagramFeed";
-import CookieBanner from "./CookieBanner";
 
 function App(): React.ReactElement {
   return (
@@ -17,7 +14,6 @@ function App(): React.ReactElement {
       }}
       className="bg-base-200 min-h-screen flex flex-col"
     >
-      <CookieBanner />
       <Header />
       <Navigation />
       <MainContent />

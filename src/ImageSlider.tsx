@@ -11,6 +11,7 @@ const Galery = () => {
     "bilder/unicorn.jpg",
     "whale.jpg",
     "bilder/women.jpg",
+    "bilder/wald.jpg",
   ];
 
   const nextSlide = () => {
@@ -62,7 +63,10 @@ const Galery = () => {
             <button onClick={prevSlide} className="btn btn-circle shadow-lg">
               ❮
             </button>
-            <button onClick={nextSlide} className="btn btn-circle mr-10 shadow-lg">
+            <button
+              onClick={nextSlide}
+              className="btn btn-circle mr-10 shadow-lg"
+            >
               ❯
             </button>
           </div>

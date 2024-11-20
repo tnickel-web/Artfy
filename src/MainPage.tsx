@@ -3,6 +3,8 @@ import ContactForm from "./ContactForm";
 import InstagramFeed from "./InstagramFeed";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
+import Galery from "./ImageSlider";
+import PersonalInformation from "./PersonalInformation";
 
 function App(): React.ReactElement {
   return (
@@ -47,7 +49,7 @@ function MainContent() {
       <div className="min-h-screen w-full flex flex-col justify-center items-center">
         <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
           <Me />
-          <InstagramFeed />
+          <Galery />
           <ContactForm />
         </div>
       </div>
@@ -76,11 +78,11 @@ function Footer() {
             <h3 className="text-lg font-semibold">Kontakt</h3>
             <div className="mb-2">
               <h4 className="font-medium">Telefon:</h4>
-              <p>+49 163 7159501</p>
+              <p>{PersonalInformation.telefon} </p>
             </div>
             <div className="mb-2">
               <h4 className="font-medium">E-Mail:</h4>
-              <p>t.akova@artfy-hb.de</p>
+              <p>{PersonalInformation.email}</p>
             </div>
           </div>
 

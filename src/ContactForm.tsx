@@ -8,6 +8,8 @@ import React, {
 } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import CallOrCopyButton from "./CallOrCopyButton";
+import SocialContactButtons from "./SocialContactButtons";
+import PersonalInformation from "./PersonalInformation";
 
 interface CustomFormData extends FormData {
   name: string;
@@ -62,7 +64,7 @@ const ContactForm: React.FC = () => {
           (error) => {
             console.log("Error" + error);
             toast.error(
-              "Email konnte nicht versendet werden! Schick mir doch direkt eine Email an t.akova@artfy-hb.de.",
+              `Email konnte nicht versendet werden! Schick mir doch direkt eine Email an ${PersonalInformation.email}.`,
               {
                 style: {
                   background: "bg-base-300", // Beispiel für Tailwind-Farbe
@@ -103,8 +105,20 @@ const ContactForm: React.FC = () => {
       >
         <div className="max-w-full bg-base-100 shadow-lg rounded-lg">
           <h2 className=" pt-4 text-2xl font-bold  text-center ">
-            Kontaktformular
+            Wie du mich erreichst
           </h2>
+          <div className="flex items-center justify-center pt-5">
+            <SocialContactButtons />
+          </div>
+          <div className="flex items-center justify-center pt-5">
+            <div className="flex items-center w-3/5">
+              <hr className="flex-1 border-t-2 border-gray-300" />
+              <span className="mx-4 text-lg font-semibold text-gray-600">
+                oder über das Kontaktformular
+              </span>
+              <hr className="flex-1 border-t-2 border-gray-300" />
+            </div>
+          </div>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -182,7 +196,6 @@ const ContactForm: React.FC = () => {
             <button type="submit" className="btn btn-primary w-full mt-4">
               Absenden
             </button>
-            <CallOrCopyButton />
             {formError && <p className="text-red-500 mt-3 ml-2">{formError}</p>}
           </form>
         </div>

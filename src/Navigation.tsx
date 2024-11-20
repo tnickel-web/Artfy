@@ -52,8 +52,8 @@ const Navigation = () => {
             isOpen={isOpen}
           ></ListItem>
           <ListItem
-            href="#instaFeed"
-            content="Instagram"
+            href="#galery"
+            content="Galerie"
             index={2}
             isOpen={isOpen}
           ></ListItem>

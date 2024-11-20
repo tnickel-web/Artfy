@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
             <div className="flex items-center w-3/5">
               <hr className="flex-1 border-t-2 border-gray-300" />
               <span className="mx-4 text-lg font-semibold text-gray-600">
-                oder über das Kontaktformular
+                oder
               </span>
               <hr className="flex-1 border-t-2 border-gray-300" />
             </div>

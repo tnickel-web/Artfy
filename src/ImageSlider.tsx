@@ -18,6 +18,7 @@ const Gallery = () => {
     "whale.jpg",
     "bilder/women.jpg",
     "bilder/wald.jpg",
+    "bilder/whiskey.jpeg",
   ];
 
   const nextSlide = () => {

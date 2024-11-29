@@ -61,11 +61,16 @@ const Galery = () => {
   return (
     <section
       id="galery"
-      className="relative bg-cover bg-center py-10 flex-grow w-full overflow-x-hidden"
+      className="relative bg-cover bg-center py-10 flex-grow w-full"
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full z-10">
+        <div
+          className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full z-10"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <button onClick={prevSlide} className="btn btn-circle shadow-lg">
             ❮
           </button>
@@ -77,7 +82,7 @@ const Galery = () => {
           </button>
         </div>
 
-        <div className="carousel w-full h-96 pb-4 relative">
+        <div className="carousel w-full h-96 pb-4 relative overflow-hidden">
           <div
             className="carousel-inner flex transition-transform duration-500"
             style={{

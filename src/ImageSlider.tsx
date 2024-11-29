@@ -66,23 +66,11 @@ const Galery = () => {
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
         <div
-          className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full z-10"
+          className="carousel w-full h-96 pb-4 relative overflow-hidden"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          <button onClick={prevSlide} className="btn btn-circle shadow-lg">
-            ❮
-          </button>
-          <button
-            onClick={nextSlide}
-            className="btn btn-circle mr-10 shadow-lg"
-          >
-            ❯
-          </button>
-        </div>
-
-        <div className="carousel w-full h-96 pb-4 relative overflow-hidden">
           <div
             className="carousel-inner flex transition-transform duration-500"
             style={{
@@ -94,9 +82,6 @@ const Galery = () => {
                 className="carousel-item w-full flex-shrink-0"
                 key={index}
                 onClick={() => openOverlay(slide)}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
               >
                 <img
                   src={slide}
@@ -105,6 +90,17 @@ const Galery = () => {
                 />
               </div>
             ))}
+          </div>
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full">
+            <button onClick={prevSlide} className="btn btn-circle shadow-lg">
+              ❮
+            </button>
+            <button
+              onClick={nextSlide}
+              className="btn btn-circle mr-10 shadow-lg"
+            >
+              ❯
+            </button>
           </div>
         </div>
         <div className="flex justify-center mt-4">

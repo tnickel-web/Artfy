@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 
 const Galery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,10 +50,8 @@ const Galery = () => {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      console.log("swipe left");
       nextSlide();
     } else if (isRightSwipe) {
-      console.log("swipe right");
       prevSlide();
     }
   };

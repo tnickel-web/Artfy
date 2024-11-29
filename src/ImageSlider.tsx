@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const Galery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -30,14 +30,54 @@ const Galery = () => {
     setSelectedImage(undefined);
   };
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      console.log("swipe left");
+      nextSlide();
+    } else if (isRightSwipe) {
+      console.log("swipe right");
+      prevSlide();
+    }
+  };
+
   return (
     <section
       id="galery"
-      className="relative bg-cover bg-center py-10 flex-grow w-full"
+      className="relative bg-cover bg-center py-10 flex-grow w-full overflow-x-hidden"
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
-        <div className="carousel w-full h-96 pb-4 relative ">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full z-10">
+          <button onClick={prevSlide} className="btn btn-circle shadow-lg">
+            ❮
+          </button>
+          <button
+            onClick={nextSlide}
+            className="btn btn-circle mr-10 shadow-lg"
+          >
+            ❯
+          </button>
+        </div>
+
+        <div className="carousel w-full h-96 pb-4 relative">
           <div
             className="carousel-inner flex transition-transform duration-500"
             style={{
@@ -49,6 +89,9 @@ const Galery = () => {
                 className="carousel-item w-full flex-shrink-0"
                 key={index}
                 onClick={() => openOverlay(slide)}
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
               >
                 <img
                   src={slide}
@@ -57,18 +100,6 @@ const Galery = () => {
                 />
               </div>
             ))}
-          </div>
-
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 w-full">
-            <button onClick={prevSlide} className="btn btn-circle shadow-lg">
-              ❮
-            </button>
-            <button
-              onClick={nextSlide}
-              className="btn btn-circle mr-10 shadow-lg"
-            >
-              ❯
-            </button>
           </div>
         </div>
         <div className="flex justify-center mt-4">

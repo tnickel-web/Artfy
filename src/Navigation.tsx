@@ -52,7 +52,7 @@ const Navigation = () => {
             isOpen={isOpen}
           ></ListItem>
           <ListItem
-            href="#galery"
+            href="#gallery"
             content="Galerie"
             index={2}
             isOpen={isOpen}

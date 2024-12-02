@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Galery = () => {
+const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedImage, setSelectedImage] = useState<string>();
 
@@ -33,7 +33,7 @@ const Galery = () => {
 
   return (
     <section
-      id="galery"
+      id="gallery"
       className="relative bg-cover bg-center py-10 flex-grow w-full"
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
@@ -108,4 +108,4 @@ const Galery = () => {
   );
 };
 
-export default Galery;
+export default Gallery;

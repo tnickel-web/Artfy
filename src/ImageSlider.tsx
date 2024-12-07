@@ -1,4 +1,10 @@
-import React, { TouchEventHandler, useState } from "react";
+import React, {
+  TouchEventHandler,
+  TouchEvent,
+  TouchList,
+  Touch,
+  useState,
+} from "react";
 
 const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -35,13 +41,41 @@ const Gallery = () => {
 
   const minSwipeDistance: number = 50;
 
-  const onTouchStart: TouchEventHandler<HTMLDivElement> = (e) => {
-    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
-    setTouchStart(e.targetTouches[0].clientX);
+  const handleInvalidTargetTouches = (targetTouches: TouchList): boolean => {
+    // Handle the edge case and reset to initial value to avoid unexpected behavior or errors
+    if (targetTouches.length === 0) {
+      setTouchStart(null);
+      setTouchEnd(null);
+
+      return true;
+    }
+
+    return false;
   };
 
-  const onTouchMove: TouchEventHandler<HTMLDivElement> = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchStart: TouchEventHandler<HTMLDivElement> = (e: TouchEvent) => {
+    // Otherwise the swipe is fired even with usual touch events
+    setTouchEnd(null);
+
+    let targetTouches: TouchList = e.targetTouches;
+    // Return early on invalid target touches
+    if (handleInvalidTargetTouches(targetTouches)) return;
+
+    let touch: Touch = targetTouches[0];
+    let clientX: number = touch.clientX;
+
+    setTouchStart(clientX);
+  };
+
+  const onTouchMove: TouchEventHandler<HTMLDivElement> = (e: TouchEvent) => {
+    let targetTouches: TouchList = e.targetTouches;
+    // Return early on invalid target touches
+    if (handleInvalidTargetTouches(targetTouches)) return;
+
+    let touch: Touch = targetTouches[0];
+    let clientX: number = touch.clientX;
+
+    setTouchEnd(clientX);
   };
 
   const onTouchEnd = () => {

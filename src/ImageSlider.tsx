@@ -42,25 +42,23 @@ const Gallery = () => {
 
   const minSwipeDistance: number = 50;
 
-  const handleInvalidTargetTouches = (targetTouches: TouchList): boolean => {
-    // Handle the edge case and reset to initial value to avoid unexpected behavior or errors
-    if (targetTouches.length === 0) {
-      setTouchStart(null);
-      setTouchEnd(null);
+  const isValidTargetTouches = (targetTouches: TouchList) => {
+    return targetTouches.length > 0;
+  };
 
-      return true;
-    }
-
-    return false;
+  const handleInvalidTargetTouches = () => {
+    setTouchStart(null);
+    setTouchEnd(null);
   };
 
   const onTouchStart: TouchEventHandler<HTMLDivElement> = (e: TouchEvent) => {
-    // Otherwise the swipe is fired even with usual touch events
-    setTouchEnd(null);
+    setTouchEnd(null); // Otherwise the swipe is fired even with usual touch events
 
     let targetTouches: TouchList = e.targetTouches;
-    // Return early on invalid target touches
-    if (handleInvalidTargetTouches(targetTouches)) return;
+    if (!isValidTargetTouches(targetTouches)) {
+      handleInvalidTargetTouches();
+      return;
+    }
 
     let touch: Touch = targetTouches[0];
     let clientX: number = touch.clientX;
@@ -70,8 +68,10 @@ const Gallery = () => {
 
   const onTouchMove: TouchEventHandler<HTMLDivElement> = (e: TouchEvent) => {
     let targetTouches: TouchList = e.targetTouches;
-    // Return early on invalid target touches
-    if (handleInvalidTargetTouches(targetTouches)) return;
+    if (!isValidTargetTouches(targetTouches)) {
+      handleInvalidTargetTouches(targetTouches);
+      return;
+    }
 
     let touch: Touch = targetTouches[0];
     let clientX: number = touch.clientX;

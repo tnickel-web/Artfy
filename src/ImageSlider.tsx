@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { TouchEventHandler, useState } from "react";
 
-const Galery = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedImage, setSelectedImage] = useState<string>();
+const Gallery = () => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>();
 
   const slides = [
     "bilder/rochen.jpg",
@@ -30,17 +30,19 @@ const Galery = () => {
     setSelectedImage(undefined);
   };
 
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  const minSwipeDistance = 50;
+  const minSwipeDistance: number = 50;
 
-  const onTouchStart = (e) => {
+  const onTouchStart: TouchEventHandler<HTMLDivElement> = (e) => {
     setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchMove: TouchEventHandler<HTMLDivElement> = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
@@ -58,7 +60,7 @@ const Galery = () => {
 
   return (
     <section
-      id="galery"
+      id="gallery"
       className="relative bg-cover bg-center py-10 flex-grow w-full"
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
@@ -137,4 +139,4 @@ const Galery = () => {
   );
 };
 
-export default Galery;
+export default Gallery;

@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 import InstagramFeed from "./InstagramFeed";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
-import Galery from "./ImageSlider";
+import Gallery from "./ImageSlider";
 import PersonalInformation from "./PersonalInformation";
 
 function App(): React.ReactElement {
@@ -49,7 +49,7 @@ function MainContent() {
       <div className="min-h-screen w-full flex flex-col justify-center items-center">
         <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
           <Me />
-          <Galery />
+          <Gallery />
           <ContactForm />
         </div>
       </div>

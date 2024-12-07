@@ -69,7 +69,7 @@ const Gallery = () => {
   const onTouchMove: TouchEventHandler<HTMLDivElement> = (e: TouchEvent) => {
     let targetTouches: TouchList = e.targetTouches;
     if (!isValidTargetTouches(targetTouches)) {
-      handleInvalidTargetTouches(targetTouches);
+      handleInvalidTargetTouches();
       return;
     }
 

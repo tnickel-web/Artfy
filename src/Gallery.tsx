@@ -2,22 +2,27 @@ import React, { useState } from "react";
 
 interface Image {
   src: string;
-  category: string;
+  category: ImageCategory;
   alt: string;
+}
+
+enum ImageCategory {
+  Other,
+  WallArt = "Wandgemälde",
 }
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>();
 
   const images: Image[] = [
-    { src: "bilder/whale_crop.jpg", category: "wall art", alt: "Malerei Wal" },
-    { src: "bilder/rochen.jpg", category: "wall art", alt: "Malerei Rochen" },
-    { src: "bilder/octopus.jpg", category: "wall art", alt: "Malerei Oktopus" },
-    { src: "bilder/sunflower.jpg", category: "", alt: "Malerei Sonnenblume" },
-    { src: "bilder/unicorn.jpg", category: "wall art", alt: "Malerei Einhorn" },
-    { src: "bilder/women.jpg", category: "", alt: "Malerei Frau" },
-    { src: "bilder/wald.jpg", category: "wall art", alt: "Malerei Wald" },
-    { src: "bilder/whiskey.jpg", category: "wall art", alt: "Malerei Whiskey" },
+    { src: "bilder/whale_crop.jpg", category: ImageCategory.WallArt, alt: "Malerei Wal" },
+    { src: "bilder/rochen.jpg", category: ImageCategory.WallArt, alt: "Malerei Rochen" },
+    { src: "bilder/octopus.jpg", category: ImageCategory.WallArt, alt: "Malerei Oktopus" },
+    { src: "bilder/sunflower.jpg", category: ImageCategory.Other, alt: "Malerei Sonnenblume" },
+    { src: "bilder/unicorn.jpg", category: ImageCategory.WallArt, alt: "Malerei Einhorn" },
+    { src: "bilder/women.jpg", category: ImageCategory.Other, alt: "Malerei Frau" },
+    { src: "bilder/wald.jpg", category: ImageCategory.WallArt, alt: "Malerei Wald" },
+    { src: "bilder/whiskey.jpg", category: ImageCategory.WallArt, alt: "Malerei Whiskey" },
   ];
 
   const openOverlay = (image: string): void => {
@@ -28,22 +33,22 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
-  const renderImagesByCategory = (category: string): React.JSX.Element[] => {
+  const renderImagesByCategory = (category: ImageCategory): React.JSX.Element[] => {
     return images
-      .filter((slide: Image) => slide.category === category)
-      .map((slide: Image) => (
+      .filter((image: Image) => image.category === category)
+      .map((image: Image) => (
         <img
           className="cursor-pointer rounded-lg w-full h-auto"
-          key={slide.src}
-          src={slide.src}
-          alt={slide.alt}
-          onClick={() => openOverlay(slide.src)}
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          onClick={() => openOverlay(image.src)}
         />
       ));
   };
 
-  const uncategorizedImages = renderImagesByCategory("");
-  const wallArtImages = renderImagesByCategory("wall art");
+  const uncategorizedImages = renderImagesByCategory(ImageCategory.Other);
+  const wallArtImages = renderImagesByCategory(ImageCategory.WallArt);
 
   return (
     <section
@@ -55,7 +60,7 @@ const Gallery = () => {
         <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-2 [&>img:not(:first-child)]:mt-8">
           {uncategorizedImages}
         </div>
-        <h3 className="text-xl font-bold mb-4 text-center mt-10">Wand</h3>
+        <h3 className="text-xl font-bold mb-4 text-center mt-10">{ImageCategory.WallArt}</h3>
         <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-8">
           {wallArtImages}
         </div>

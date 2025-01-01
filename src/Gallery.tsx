@@ -1,31 +1,10 @@
 import React, { useState } from "react";
-
-interface Image {
-  src: string;
-  category: ImageCategory;
-  alt: string;
-}
-
-enum ImageCategory {
-  Other,
-  WallArt = "Wandgemälde",
-}
+import { images, ImageCategory, Image } from "./utils/image-data.ts";
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>();
+  const [selectedImage, setSelectedImage] = useState<Image | null>();
 
-  const images: Image[] = [
-    { src: "bilder/whale_crop.jpg", category: ImageCategory.WallArt, alt: "Malerei Wal" },
-    { src: "bilder/rochen.jpg", category: ImageCategory.WallArt, alt: "Malerei Rochen" },
-    { src: "bilder/octopus.jpg", category: ImageCategory.WallArt, alt: "Malerei Oktopus" },
-    { src: "bilder/sunflower.jpg", category: ImageCategory.Other, alt: "Malerei Sonnenblume" },
-    { src: "bilder/unicorn.jpg", category: ImageCategory.WallArt, alt: "Malerei Einhorn" },
-    { src: "bilder/women.jpg", category: ImageCategory.Other, alt: "Malerei Frau" },
-    { src: "bilder/wald.jpg", category: ImageCategory.WallArt, alt: "Malerei Wald" },
-    { src: "bilder/whiskey.jpg", category: ImageCategory.WallArt, alt: "Malerei Whiskey" },
-  ];
-
-  const openOverlay = (image: string): void => {
+  const openOverlay = (image: Image): void => {
     setSelectedImage(image);
   };
 
@@ -42,7 +21,7 @@ const Gallery = () => {
           key={image.src}
           src={image.src}
           alt={image.alt}
-          onClick={() => openOverlay(image.src)}
+          onClick={() => openOverlay(image)}
         />
       ));
   };
@@ -60,7 +39,9 @@ const Gallery = () => {
         <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-2 [&>img:not(:first-child)]:mt-8">
           {uncategorizedImages}
         </div>
-        <h3 className="text-xl font-bold mb-4 text-center mt-10">{ImageCategory.WallArt}</h3>
+        <h3 className="text-xl font-bold mb-4 text-center mt-10">
+          {ImageCategory.WallArt}
+        </h3>
         <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-8">
           {wallArtImages}
         </div>
@@ -73,8 +54,8 @@ const Gallery = () => {
         >
           <div className="max-w-4xl max-h-4xl">
             <img
-              src={selectedImage}
-              alt="Enlarged view"
+              src={selectedImage.src}
+              alt={"Vergrößerte Ansicht " + selectedImage.alt}
               className="max-w-full max-h-full object-contain"
               onClick={(e) => {
                 e.stopPropagation();

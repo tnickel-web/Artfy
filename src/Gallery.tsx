@@ -20,7 +20,6 @@ const Gallery = () => {
       .map((image: Image) => (
         <img
           className="cursor-pointer rounded-lg w-full h-auto"
-          loading="lazy"
           key={image.src}
           src={image.src}
           alt={image.alt}

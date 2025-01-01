@@ -1,4 +1,5 @@
 import React from "react";
+import tammiImg from "/tammi.jpg"
 
 export const Me = () => {
   return (
@@ -47,7 +48,7 @@ export const Me = () => {
           </div>
           <div className="flex justify-center items-center">
             <img
-              src="tammi.jpg"
+              src={tammiImg}
               alt="Profilbild"
               className="w-40 h-40 rounded-full object-cover border-2 border-orange-300 shadow-lg my-6 self-center"
             />

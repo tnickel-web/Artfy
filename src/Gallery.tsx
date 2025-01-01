@@ -12,7 +12,9 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
-  const renderImagesByCategory = (category: ImageCategory): React.JSX.Element[] => {
+  const renderImagesByCategory = (
+    category: ImageCategory,
+  ): React.JSX.Element[] => {
     return images
       .filter((image: Image) => image.category === category)
       .map((image: Image) => (

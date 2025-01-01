@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 import InstagramFeed from "./InstagramFeed";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
-import Gallery from "./Gallery.tsx";
+import Gallery from "./Gallery";
 import PersonalInformation from "./PersonalInformation";
 
 function App(): React.ReactElement {

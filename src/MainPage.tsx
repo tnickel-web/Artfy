@@ -12,7 +12,7 @@ function App(): React.ReactElement {
   return (
     <div
       style={{
-        backgroundImage: "url('background_horizontal.png')",
+        backgroundImage: "url('background_horizontal.jpg')",
         backgroundRepeat: "repeat-y",
         backgroundSize: "100% auto",
       }}

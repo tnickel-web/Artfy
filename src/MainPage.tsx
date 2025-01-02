@@ -33,12 +33,12 @@ function Header() {
         <img
           className="mt-14 sm:mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
           src={headerImg}
-          alt="Beschreibung"
+          alt="Artfy Logo"
         ></img>
         <img
           className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
           src={titelUnterImg}
-          alt="Beschreibung"
+          alt="Bereit, für kreative Wände? :)"
         ></img>
       </header>
     </section>

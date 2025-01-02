@@ -19,7 +19,7 @@ const Gallery = () => {
       .filter((image: Image) => image.category === category)
       .map((image: Image) => (
         <img
-          className="cursor-pointer rounded-lg w-full h-auto"
+          className="cursor-pointer rounded-lg"
           key={image.src}
           src={image.src}
           alt={image.alt}

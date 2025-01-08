@@ -12,12 +12,14 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
-  const renderImagesByCategory = (category: ImageCategory): React.JSX.Element[] => {
+  const renderImagesByCategory = (
+    category: ImageCategory,
+  ): React.JSX.Element[] => {
     return images
       .filter((image: Image) => image.category === category)
       .map((image: Image) => (
         <img
-          className="cursor-pointer rounded-lg w-full h-auto"
+          className="cursor-pointer rounded-lg"
           key={image.src}
           src={image.src}
           alt={image.alt}
@@ -57,6 +59,7 @@ const Gallery = () => {
               src={selectedImage.src}
               alt={"Vergrößerte Ansicht " + selectedImage.alt}
               className="max-w-full max-h-full object-contain"
+              loading="lazy"
               onClick={(e) => {
                 e.stopPropagation();
                 closeOverlay();

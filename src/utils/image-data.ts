@@ -6,6 +6,8 @@ import unicornImg from "/bilder/unicorn.jpg"
 import womenImg from "/bilder/women.jpg"
 import waldImg from "/bilder/wald.jpg"
 import whiskeyImg from "/bilder/whiskey.jpg"
+import leavesImg from "/bilder/leaves.jpg"
+import spaceImg from "/bilder/space.jpg"
 
 export interface Image {
   src: string;
@@ -19,6 +21,8 @@ export enum ImageCategory {
 }
 
 export const images: Image[] = [
+  { src: leavesImg, category: ImageCategory.WallArt, alt: "Wandmalerei Blätter" },
+  { src: spaceImg, category: ImageCategory.WallArt, alt: "Wandmalerei Weltraum" },
   { src: whaleImg, category: ImageCategory.WallArt, alt: "Wandmalerei Wal" },
   { src: rochenImg, category: ImageCategory.WallArt, alt: "Wandmalerei Rochen" },
   { src: octopusImg, category: ImageCategory.WallArt, alt: "Wandmalerei Oktopus" },

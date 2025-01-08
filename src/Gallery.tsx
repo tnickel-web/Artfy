@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-import { images, ImageCategory, Image } from "./utils/image-data.ts";
+import React, { useEffect, useState } from "react";
+import { Image, ImageCategory, images } from "./utils/image-data.ts";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<Image | null>();
+  const [openCategories, setOpenCategories] = useState<ImageCategory[]>([]);
+
+  useEffect(() => {
+    // Open "Other" category by default
+    setOpenCategories([ImageCategory.Other]);
+  }, []);
 
   const openOverlay = (image: Image): void => {
     setSelectedImage(image);
@@ -10,6 +16,14 @@ const Gallery = () => {
 
   const closeOverlay = (): void => {
     setSelectedImage(null);
+  };
+
+  const toggleCategory = (category: ImageCategory) => {
+    setOpenCategories((prevCategories) =>
+      prevCategories.includes(category)
+        ? prevCategories.filter((c) => c !== category)
+        : [...prevCategories, category],
+    );
   };
 
   const renderImagesByCategory = (
@@ -38,14 +52,35 @@ const Gallery = () => {
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
-        <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-2 [&>img:not(:first-child)]:mt-8">
-          {uncategorizedImages}
-        </div>
-        <h3 className="text-xl font-bold mb-4 text-center mt-10">
-          {ImageCategory.WallArt}
+        <h3
+          className="text-xl font-bold mb-4 text-center mt-10 cursor-pointer bg-gray-100 flex items-center"
+          onClick={() => toggleCategory(ImageCategory.WallArt)}
+        >
+          <span className="flex-grow m-2">{ImageCategory.WallArt}</span>
+          <span>
+            {openCategories.includes(ImageCategory.WallArt) ? "↑" : "↓"}
+          </span>
         </h3>
-        <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-8">
+        <div
+          className={`columns-1 gap-5 sm:columns-3 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-8 ${
+            openCategories.includes(ImageCategory.WallArt) ? "block" : "hidden"
+          }`}
+        >
           {wallArtImages}
+        </div>
+        <h3
+          className="text-xl font-bold mb-4 text-center mt-10 cursor-pointer bg-gray-100 flex items-center"
+          onClick={() => toggleCategory(ImageCategory.Other)}
+        >
+          <span className="flex-grow m-2">{ImageCategory.Other}</span>
+          <span>{openCategories.includes(ImageCategory.Other) ? "↑" : "↓"}</span>
+        </h3>
+        <div
+          className={`columns-1 gap-5 sm:columns-2 md:columns-2 lg:columns-2 [&>img:not(:first-child)]:mt-8 ${
+            openCategories.includes(ImageCategory.Other) ? "block" : "hidden"
+          }`}
+        >
+          {uncategorizedImages}
         </div>
       </div>
 

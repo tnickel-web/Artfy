@@ -5,7 +5,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string>();
 
   const slides = [
-    "bilder/sunflower.jpg",
+    "bilder/sunflower2.jpg",
     "bilder/octopus.jpg",
     "bilder/leaves.jpg",
     "bilder/rochen.jpg",
@@ -15,7 +15,7 @@ const Gallery = () => {
     "bilder/wald.jpg",
     "bilder/whiskey.jpeg",
     "bilder/women.jpg",
-    "bilder/sunflower2.jpg",
+    "bilder/sunflower.jpg",
   ];
 
   const nextSlide = () => {

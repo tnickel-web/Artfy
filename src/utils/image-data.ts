@@ -16,7 +16,7 @@ export interface Image {
 }
 
 export enum ImageCategory {
-  Other,
+  Other = "Andere",
   WallArt = "Wandgemälde",
 }
 

@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { images, ImageCategory, Image } from "./utils/image-data.ts";
 
-const Gallery = () => {
+const Gallery = (): React.ReactElement => {
   const [selectedImage, setSelectedImage] = useState<Image | null>();
+
+  useEffect(() => {
+    renderAllCategories();
+  }, []);
 
   const openOverlay = (image: Image): void => {
     setSelectedImage(image);
@@ -28,8 +32,26 @@ const Gallery = () => {
       ));
   };
 
-  const uncategorizedImages = renderImagesByCategory(ImageCategory.Other);
-  const wallArtImages = renderImagesByCategory(ImageCategory.WallArt);
+  const renderAllCategories = () => {
+    return Object.values(ImageCategory).map((category) => {
+      const imagesCount = images.filter(
+        (image) => image.category === category,
+      ).length;
+
+      return (
+        <div key={category}>
+          <h3 className="text-xl font-bold mb-4 text-center mt-10">
+            {category}
+          </h3>
+          <div
+            className={`columns-1 gap-5 [&>img:not(:first-child)]:mt-8 ${imagesCount >= 3 ? "md:columns-3 lg:columns-3" : "md:columns-2 lg:columns-2"}`}
+          >
+            {renderImagesByCategory(category as ImageCategory)}
+          </div>
+        </div>
+      );
+    });
+  };
 
   return (
     <section
@@ -38,15 +60,7 @@ const Gallery = () => {
     >
       <div className="p-4 bg-base-100 shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
-        <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-2 [&>img:not(:first-child)]:mt-8">
-          {uncategorizedImages}
-        </div>
-        <h3 className="text-xl font-bold mb-4 text-center mt-10">
-          {ImageCategory.WallArt}
-        </h3>
-        <div className="columns-1 gap-5 sm:columns-2 md:columns-3 lg:columns-3 [&>img:not(:first-child)]:mt-8">
-          {wallArtImages}
-        </div>
+        {renderAllCategories()}
       </div>
 
       {selectedImage && (

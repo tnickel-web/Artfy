@@ -50,13 +50,13 @@ export const Me = () => {
             <img
               src={tammiImg}
               alt="Profilbild"
-              className="w-40 h-40 rounded-full object-cover border-2 border-orange-300 shadow-lg my-6 self-center"
+              className="w-60 h-60 rounded-full object-cover border-2 border-orange-300 shadow-lg self-center"
             />
           </div>
 
           {/* Dritte Reihe - volle Breite */}
           <div className="col-span-1 md:col-span-2">
-          <p className=" mb-4">
+          <p className="mb-4">
               Nach weiteren zwei Jahren voller toller Projekte und viel
               Erfahrung habe ich mich spontan dazu entschlossen, mich
               selbstständig zu machen. Seitdem gestalte ich mit Herzblut Wände,

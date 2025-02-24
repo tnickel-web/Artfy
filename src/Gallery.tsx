@@ -40,11 +40,11 @@ const Gallery = (): React.ReactElement => {
 
       return (
         <div key={category}>
-          <h3 className="text-xl font-bold mb-4 text-center mt-10">
+          <h3 className="text-2xl font-bold mb-4 text-center mt-10">
             {category}
           </h3>
           <div
-            className={`columns-1 gap-5 [&>img:not(:first-child)]:mt-8 ${imagesCount >= 3 ? "md:columns-3 lg:columns-3" : "md:columns-2 lg:columns-2"}`}
+            className={`columns-1 gap-3 [&>img:not(:first-child)]:mt-8 ${imagesCount >= 3 ? "md:columns-2 lg:columns-3" : "md:columns-2 lg:columns-2"}`}
           >
             {renderImagesByCategory(category as ImageCategory)}
           </div>
@@ -56,10 +56,10 @@ const Gallery = (): React.ReactElement => {
   return (
     <section
       id="gallery"
-      className="relative bg-cover bg-center py-10 flex-grow w-full"
+      className="container mx-auto p-4 bg-base-100 shadow-lg rounded-lg"
     >
-      <div className="p-4 bg-base-100 shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4 text-center">Galerie</h2>
+      <div className="p-2 bg-base-100 rounded-lg">
+        <h2 className="text-4xl font-bold mb-4 text-center">Galerie</h2>
         {renderAllCategories()}
       </div>
 

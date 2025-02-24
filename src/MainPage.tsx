@@ -29,16 +29,19 @@ function App(): React.ReactElement {
 function Header() {
   return (
     <section id="header">
-      <header className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center">
+      <header className="grid grid-cols-1 place-items-center relative justify-center py-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
         <img
-          className="mt-14 sm:mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+          className="mt-8 sm:mt-6 px-4 sm:px-6
+           w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
           src={headerImg}
           alt="Artfy Logo"
         ></img>
+
         <img
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
+          className="mt-8 sm:mt-6 px-4 sm:px-6
+           w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
           src={titelUnterImg}
-          alt="Bereit, für kreative Wände? :)"
+          alt=" Bereit, für kreative Wände? :)"
         ></img>
       </header>
     </section>
@@ -47,9 +50,9 @@ function Header() {
 
 function MainContent() {
   return (
-    <div className="w-30 min-h-screen bg-cover bg-center">
-      <div className="min-h-screen w-full flex flex-col justify-center items-center">
-        <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
+    <div className="min-h-screen bg-cover bg-center">
+      <div className="min-h-screen flex flex-col justify-center items-center">
+        <div className="w-full max-w-screen-lg md:max-w-[800px] lg:max-w-[1000px] mx-auto p-4">
           <Me />
           <Gallery />
           <ContactForm />

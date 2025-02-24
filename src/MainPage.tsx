@@ -103,7 +103,7 @@ function Footer() {
         </div>
       </div>
       <p className="text-center">
-        &copy; 2024 Tamara Akova. Alle Rechte vorbehalten.
+        &copy; 2025 Tamara Akova. Alle Rechte vorbehalten.
       </p>
     </footer>
   );

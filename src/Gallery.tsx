@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { images, ImageCategory, Image } from "./utils/image-data.ts";
 
 const Gallery = (): React.ReactElement => {
-  const [selectedImage, setSelectedImage] = useState<Image | null>();
-
-  useEffect(() => {
-    renderAllCategories();
-  }, []);
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   const openOverlay = (image: Image): void => {
     setSelectedImage(image);
@@ -14,6 +11,14 @@ const Gallery = (): React.ReactElement => {
 
   const closeOverlay = (): void => {
     setSelectedImage(null);
+  };
+
+  const toggleCategory = (category: string): void => {
+    setExpandedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((cat) => cat !== category)
+        : [...prev, category],
+    );
   };
 
   const renderImagesByCategory = (
@@ -38,15 +43,43 @@ const Gallery = (): React.ReactElement => {
         (image) => image.category === category,
       ).length;
 
+      const isExpanded = expandedCategories.includes(category);
+      const contentRef = useRef<HTMLDivElement>(null);
+
+      useEffect(() => {
+        if (isExpanded && contentRef.current) {
+          contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
+        }
+      }, [isExpanded]);
+
       return (
-        <div key={category}>
-          <h3 className="text-2xl font-bold mb-4 text-center mt-10">
-            {category}
-          </h3>
-          <div
-            className={`columns-1 gap-3 [&>img:not(:first-child)]:mt-8 ${imagesCount >= 3 ? "md:columns-2 lg:columns-3" : "md:columns-2 lg:columns-2"}`}
+        <div key={category} className="mb-8">
+          <h3
+            onClick={() => toggleCategory(category)}
+            className="cursor-pointer text-2xl font-bold mb-2 text-center mt-10 bg-gray-200 p-4 rounded-lg hover:bg-gray-300 transition flex justify-between items-center"
           >
-            {renderImagesByCategory(category as ImageCategory)}
+            {category} <span>{isExpanded ? "▲" : "▼"}</span>
+          </h3>
+
+          <div
+            ref={contentRef}
+            style={{
+              maxHeight: isExpanded
+                ? `${contentRef.current?.scrollHeight || 0}px`
+                : "0px",
+              transition: "max-height 500ms ease-in-out",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className={`columns-1 gap-4 [&>img:not(:first-child)]:mt-8 ${
+                imagesCount >= 3
+                  ? "md:columns-2 lg:columns-3"
+                  : "md:columns-2 lg:columns-2"
+              }`}
+            >
+              {renderImagesByCategory(category as ImageCategory)}
+            </div>
           </div>
         </div>
       );

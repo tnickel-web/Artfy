@@ -46,12 +46,6 @@ const Gallery = (): React.ReactElement => {
       const isExpanded = expandedCategories.includes(category);
       const contentRef = useRef<HTMLDivElement>(null);
 
-      useEffect(() => {
-        if (isExpanded && contentRef.current) {
-          contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
-        }
-      }, [isExpanded]);
-
       return (
         <div key={category} className="mb-8">
           <h3

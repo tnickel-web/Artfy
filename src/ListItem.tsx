@@ -1,6 +1,12 @@
-import React, { ReactElement } from "react";
+import React from "react";
+import type { ReactElement } from "react";
 
-const ListItem = (props: { href: string, content: string, index: number, isOpen: boolean }): ReactElement => {
+const ListItem = (props: {
+  href: string;
+  content: string;
+  index: number;
+  isOpen: boolean;
+}): ReactElement => {
   return (
     <li
       className={`

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { ReactElement } from "react";
 import { InstagramEmbed } from "react-social-media-embed";
+import type { ReactElement } from "react";
 
 const InstagramFeed = (): ReactElement => {
   useEffect(() => {

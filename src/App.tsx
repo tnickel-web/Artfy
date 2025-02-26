@@ -1,7 +1,7 @@
+import emailjs from "@emailjs/browser";
 import React, { useEffect } from "react";
 import "./App.css";
 import MainPage from "./MainPage";
-import emailjs from "@emailjs/browser";
 
 function App(): React.ReactElement {
   useEffect(() => {

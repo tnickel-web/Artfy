@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import PersonalInformation from "./PersonalInformation";
 
-const SocialContactButtons = () => {
+const SocialContactButtons = (): React.ReactElement => {
   return (
     <div className="flex space-x-4">
       {/* Instagram Button */}

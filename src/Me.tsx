@@ -1,7 +1,7 @@
 import React from "react";
-import tammiImg from "/tammi.jpg"
+import tammiImg from "/tammi.jpg";
 
-export const Me = () => {
+export const Me = (): React.ReactElement => {
   return (
     <section
       id="aboutMe"
@@ -24,12 +24,12 @@ export const Me = () => {
               bringe ich sie auf eine ganz besondere Weise zum Strahlen.
             </p>
             <p>
-              Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich mit
-              Untergrund, Farben und Formen umgehe, um aus einer schlichten Fläche ein
-              Kunstwerk zu zaubern. Egal, ob du schon eine klare Idee hast oder
-              mir gestalterische Freiheit lässt – wir arbeiten Hand in Hand, um
-              ein Ergebnis zu schaffen, das perfekt zu dir und deinem Raum
-              passt.
+              Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich
+              mit Untergrund, Farben und Formen umgehe, um aus einer schlichten
+              Fläche ein Kunstwerk zu zaubern. Egal, ob du schon eine klare Idee
+              hast oder mir gestalterische Freiheit lässt – wir arbeiten Hand in
+              Hand, um ein Ergebnis zu schaffen, das perfekt zu dir und deinem
+              Raum passt.
             </p>
           </div>
 
@@ -37,14 +37,13 @@ export const Me = () => {
           <div>
             <h2 className="text-xl font-bold mb-4">Das bin ich</h2>
             <p>
-              Ich bin Tamara Akova, aber die meisten nennen mich „Tammi". 2015
-              habe ich meine Ausbildung als Malerin und Lackiererin gestartet,
-              und nach bestandener Prüfung und zwei spannenden Berufsjahren war
-              für mich klar, dass ich noch einen Schritt weitergehen möchte.
-              2022 – pünktlich zum Valentinstag – hielt ich stolz meinen
-              Meisterbrief in der Hand.
+              Ich bin Tamara Akova, aber die meisten nennen mich „Tammi&#34;.
+              2015 habe ich meine Ausbildung als Malerin und Lackiererin
+              gestartet, und nach bestandener Prüfung und zwei spannenden
+              Berufsjahren war für mich klar, dass ich noch einen Schritt
+              weitergehen möchte. 2022 – pünktlich zum Valentinstag – hielt ich
+              stolz meinen Meisterbrief in der Hand.
             </p>
-           
           </div>
           <div className="flex justify-center items-center">
             <img
@@ -56,7 +55,7 @@ export const Me = () => {
 
           {/* Dritte Reihe - volle Breite */}
           <div className="col-span-1 md:col-span-2">
-          <p className="mb-4">
+            <p className="mb-4">
               Nach weiteren zwei Jahren voller toller Projekte und viel
               Erfahrung habe ich mich spontan dazu entschlossen, mich
               selbstständig zu machen. Seitdem gestalte ich mit Herzblut Wände,
@@ -66,7 +65,6 @@ export const Me = () => {
               bestärkt, meiner Leidenschaft für Wandmalerei voll und ganz
               nachzugehen. Und hier bin ich, bereit, deine Wand in ein buntes
               Kunstwerk zu verwandeln!
-
             </p>
             <h2 className="text-xl font-bold mb-4">So wird deine Wand bunt</h2>
             <p className="mb-4">

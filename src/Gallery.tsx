@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import { images, ImageCategory, Image } from "./utils/image-data.ts";
+import React, { useState, useRef } from "react";
+import { images, ImageCategory } from "./utils/image-data.ts";
+import type { Image } from "./utils/image-data.ts";
 
 const Gallery = (): React.ReactElement => {
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
@@ -37,7 +38,7 @@ const Gallery = (): React.ReactElement => {
       ));
   };
 
-  const renderAllCategories = () => {
+  const renderAllCategories = (): React.JSX.Element[] => {
     return Object.values(ImageCategory).map((category) => {
       const imagesCount = images.filter(
         (image) => image.category === category,

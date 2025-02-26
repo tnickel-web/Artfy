@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ListItem from "./ListItem";
 
-const Navigation = () => {
+const Navigation = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

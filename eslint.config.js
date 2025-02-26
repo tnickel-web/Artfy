@@ -1,46 +1,71 @@
-import tseslint from "@typescript-eslint/eslint-plugin";
-import pluginJs from "eslint-plugin-js";
+import pluginJs from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
+import eslintPluginPrettier from "eslint-plugin-prettier";
 import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    languageOptions: {
+      globals: globals.browser,
+    },
   },
   {
-    languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
+    plugins: {
+      prettier: eslintPluginPrettier,
+      react: pluginReact,
+      "react-hooks": pluginReactHooks,
+      import: importPlugin,
     },
     rules: {
-      "no-console": "warn", // Beispiel: Warnungen bei console.log-Aufrufen
-      eqeqeq: "error", // Beispiel: Strikter Vergleich (===) erzwingen
-      "@typescript-eslint/explicit-function-return-type": "on",
-      "react/react-in-jsx-scope": "on",
-    },
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  tseslint.configs.stylisticTypeChecked({
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-    rules: {
-      // Zusätzliche oder überschreibende Regeln für den stylisticTypeChecked-Teil
+      "prettier/prettier": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "type",
+          ],
+          alphabetize: { order: "asc", caseInsensitive: true },
+        },
+      ],
+      "import/newline-after-import": "error",
+      "import/no-duplicates": "error",
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      eqeqeq: "error",
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      curly: ["error", "all"],
       "@typescript-eslint/no-unused-vars": [
         "error",
         { argsIgnorePattern: "^_" },
-      ], // Beispiel: Fehler bei ungenutzten Variablen, mit Ausnahme von Argumenten, die mit _ beginnen
-      indent: ["error", 4],
-      ...React.configs.recommended.rules,
-      ...React.configs["jsx-runtime"].rules,
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/explicit-function-return-type": "warn",
     },
-  }),
-  pluginReact.configs.flat.recommended,
+  },
+  {
+    ignores: ["node_modules/", "dist/", "build/", "coverage/", "*.d.ts"],
+  },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    ...pluginReact.configs.flat.recommended,
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
 ];

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
 import Cookie from "js-cookie";
+import React, { useState, useEffect } from "react";
 
 // CookieBanner Komponente
-const CookieBanner = () => {
+const CookieBanner = (): false | React.JSX.Element => {
   const [isBannerVisible, setIsBannerVisible] = useState(false);
 
   // Überprüfen, ob der Benutzer bereits zugestimmt hat
@@ -14,7 +14,7 @@ const CookieBanner = () => {
   }, []);
 
   // Funktion, die ausgeführt wird, wenn der Benutzer zustimmt
-  const handleConsent = () => {
+  const handleConsent = (): void => {
     // Setze einen Cookie, um die Zustimmung zu speichern
     Cookie.set("cookieConsent", "true", { expires: 365 });
     setIsBannerVisible(false); // Banner ausblenden

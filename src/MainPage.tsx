@@ -1,6 +1,5 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import InstagramFeed from "./InstagramFeed";
 import { Me } from "./Me";
 import Navigation from "./Navigation";
 import Gallery from "./Gallery";
@@ -26,7 +25,7 @@ function App(): React.ReactElement {
   );
 }
 
-function Header() {
+function Header(): React.ReactElement {
   return (
     <section id="header">
       <header className="grid grid-cols-1 place-items-center relative justify-center py-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
@@ -48,7 +47,7 @@ function Header() {
   );
 }
 
-function MainContent() {
+function MainContent(): React.ReactElement {
   return (
     <div className="min-h-screen bg-cover bg-center">
       <div className="min-h-screen flex flex-col justify-center items-center">
@@ -62,7 +61,7 @@ function MainContent() {
   );
 }
 
-function Footer() {
+function Footer(): React.ReactElement {
   return (
     <footer id="footer" className="bg-neutral text-neutral-content py-6">
       <div className="max-w-7xl mx-auto px-4">

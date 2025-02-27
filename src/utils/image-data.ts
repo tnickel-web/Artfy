@@ -1,4 +1,5 @@
 import whaleImg from "/bilder/whale_crop.jpg";
+import whale2Img from "/bilder/whale2.jpg";
 import rochenImg from "/bilder/rochen.jpg";
 import octopusImg from "/bilder/octopus.jpg";
 import sunflowerImg from "/bilder/sunflower.jpg";
@@ -35,6 +36,11 @@ export const images: Image[] = [
     src: whaleImg,
     category: ImageCategory.WallArt,
     alt: "Wandmalerei Wal",
+  },
+  {
+    src: whale2Img,
+    category: ImageCategory.WallArt,
+    alt: "Wandmalerei Wal 2",
   },
   {
     src: rochenImg,

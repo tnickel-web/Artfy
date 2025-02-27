@@ -33,6 +33,8 @@ function Header(): React.ReactElement {
           className="mt-8 sm:mt-6 px-4 sm:px-6
            w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
           src={headerImg}
+          width="100%"
+          height="100%"
           alt="Artfy Logo"
         ></img>
 
@@ -40,7 +42,9 @@ function Header(): React.ReactElement {
           className="mt-8 sm:mt-6 px-4 sm:px-6
            w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
           src={titelUnterImg}
-          alt=" Bereit, für kreative Wände? :)"
+          width="100%"
+          height="100%"
+          alt="Bereit, für kreative Wände? :)"
         ></img>
       </header>
     </section>

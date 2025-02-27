@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { images, ImageCategory } from "./utils/image-data.ts";
-import type { Image } from "./utils/image-data.ts";
+import { images, ImageCategory } from "../utils/image-data.ts";
+import type { Image } from "../utils/image-data.ts";
 
 const Gallery = (): React.ReactElement => {
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
@@ -45,13 +45,14 @@ const Gallery = (): React.ReactElement => {
       ).length;
 
       const isExpanded = expandedCategories.includes(category);
-      const contentRef = useRef<HTMLDivElement>(null);
+      const contentRef = React.useRef<HTMLDivElement>(null);
 
       return (
         <div key={category} className="mb-8">
           <h3
             onClick={() => toggleCategory(category)}
-            className="cursor-pointer text-2xl font-bold mb-2 text-center mt-10 bg-gray-200 p-4 rounded-lg hover:bg-gray-300 transition flex justify-between items-center"
+            className="cursor-pointer text-2xl font-bold mb-2 text-center mt-10 bg-gray-200 p-4 rounded-lg
+            hover:bg-gray-300 transition flex justify-between items-center"
           >
             {category} <span>{isExpanded ? "▲" : "▼"}</span>
           </h3>

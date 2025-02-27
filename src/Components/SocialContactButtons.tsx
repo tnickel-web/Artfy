@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaWhatsapp,
 } from "react-icons/fa";
-import PersonalInformation from "./PersonalInformation";
+import PersonalInformation from "../utils/personal-information.ts";
 
 const SocialContactButtons = (): React.ReactElement => {
   return (

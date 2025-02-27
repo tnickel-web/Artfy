@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ListItem from "./ListItem";
+import ListItem from "./ListItem.tsx";
 
 const Navigation = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false);

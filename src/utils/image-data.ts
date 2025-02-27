@@ -31,7 +31,11 @@ export const images: Image[] = [
     category: ImageCategory.WallArt,
     alt: "Wandmalerei Weltraum",
   },
-  { src: whaleImg, category: ImageCategory.WallArt, alt: "Wandmalerei Wal" },
+  {
+    src: whaleImg,
+    category: ImageCategory.WallArt,
+    alt: "Wandmalerei Wal",
+  },
   {
     src: rochenImg,
     category: ImageCategory.WallArt,
@@ -52,8 +56,16 @@ export const images: Image[] = [
     category: ImageCategory.WallArt,
     alt: "Wandmalerei Einhorn",
   },
-  { src: womenImg, category: ImageCategory.Other, alt: "Malerei Frau" },
-  { src: waldImg, category: ImageCategory.WallArt, alt: "Wandmalerei Wald" },
+  {
+    src: womenImg,
+    category: ImageCategory.Other,
+    alt: "Malerei Frau",
+  },
+  {
+    src: waldImg,
+    category: ImageCategory.WallArt,
+    alt: "Wandmalerei Wald",
+  },
   {
     src: whiskeyImg,
     category: ImageCategory.WallArt,

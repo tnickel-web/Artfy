@@ -13,7 +13,7 @@
       "paths": {
         "@/*": ["src/*"]
       },
-      "jsx": "react" // Hier sicherstellen, dass dies richtig gesetzt ist
+      "jsx": "react"
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules"]

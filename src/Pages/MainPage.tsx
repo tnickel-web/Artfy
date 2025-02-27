@@ -1,9 +1,9 @@
 import React from "react";
-import ContactForm from "./ContactForm";
-import { Me } from "./Me";
-import Navigation from "./Navigation";
-import Gallery from "./Gallery";
-import PersonalInformation from "./PersonalInformation";
+import ContactForm from "../Components/ContactForm.tsx";
+import { Me } from "../Components/Me.tsx";
+import Navigation from "../Components/Navigation.tsx";
+import Gallery from "../Components/Gallery.tsx";
+import PersonalInformation from "../utils/personal-information.ts";
 import headerImg from "/Header.png";
 import titelUnterImg from "/titel_unter.png";
 

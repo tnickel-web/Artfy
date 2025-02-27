@@ -8,12 +8,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: [], // Hier kannst du Module angeben, die extern sein sollen
+      external: [],
     },
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"), // Alias für den src-Ordner
+      "@": resolve(__dirname, "src"),
     },
   },
   define: {

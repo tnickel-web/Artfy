@@ -6,7 +6,6 @@ const InstagramFeed = (): ReactElement => {
   useEffect(() => {
     const divs = document.querySelectorAll("div");
 
-    // Durch die divs iterieren und nach dem Inhalt suchen
     divs.forEach((div) => {
       if (
         div.textContent &&
@@ -16,6 +15,7 @@ const InstagramFeed = (): ReactElement => {
       }
     });
   }, []);
+
   return (
     <section
       id="instaFeed"

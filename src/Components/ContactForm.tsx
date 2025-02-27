@@ -1,8 +1,8 @@
 import emailjs from "@emailjs/browser";
 import React, { createRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import PersonalInformation from "./PersonalInformation";
-import SocialContactButtons from "./SocialContactButtons";
+import PersonalInformation from "../utils/personal-information.ts";
+import SocialContactButtons from "./SocialContactButtons.tsx";
 import type { FormEvent, LegacyRef } from "react";
 
 interface CustomFormData extends FormData {
@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
           (_) => {
             toast.success("Email wurde versendet!", {
               style: {
-                background: "bg-base-300", // Beispiel für Tailwind-Farbe
+                background: "bg-base-300",
                 color: "#000",
                 borderRadius: "0.5rem",
               },
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
               `Email konnte nicht versendet werden! Schick mir doch direkt eine Email an ${PersonalInformation.email}.`,
               {
                 style: {
-                  background: "bg-base-300", // Beispiel für Tailwind-Farbe
+                  background: "bg-base-300",
                   color: "#000",
                   borderRadius: "0.5rem",
                 },

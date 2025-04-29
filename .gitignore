@@ -69,3 +69,5 @@ out/
 # Optional: Cypress
 cypress/videos/
 cypress/screenshots/
+
+**/__pycache__/

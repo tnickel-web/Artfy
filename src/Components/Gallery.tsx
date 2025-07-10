@@ -51,10 +51,10 @@ const Gallery = (): React.ReactElement => {
       const isExpanded = expandedCategories.includes(category);
 
       return (
-        <div key={category} className="mb-8">
+        <div key={category} className="mb-4">
           <h3
             onClick={() => toggleCategory(category)}
-            className="cursor-pointer text-2xl font-bold mb-2 text-center mt-10 bg-gray-200 p-4 rounded-lg
+            className="cursor-pointer text-2xl font-bold mb-2 text-center bg-gray-200 p-4 rounded-lg
             hover:bg-gray-300 transition flex justify-between items-center"
           >
             {category} <span>{isExpanded ? "▲" : "▼"}</span>
@@ -85,7 +85,7 @@ const Gallery = (): React.ReactElement => {
       id="gallery"
       className="container mx-auto p-4 bg-base-100 shadow-lg rounded-lg"
     >
-      <div className="p-2 bg-base-100 rounded-lg">
+      <div className="p-1 bg-base-100 rounded-lg">
         <h2 className="text-4xl font-bold mb-4 text-center">Galerie</h2>
         {renderAllCategories()}
       </div>

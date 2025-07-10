@@ -3,8 +3,11 @@ import { images, ImageCategory } from "../utils/image-data.ts";
 import type { Image } from "../utils/image-data.ts";
 
 const Gallery = (): React.ReactElement => {
+  const initialCategory = ImageCategory.WallArt;
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([
+    initialCategory,
+  ]);
 
   const openOverlay = (image: Image): void => {
     setSelectedImage(image);

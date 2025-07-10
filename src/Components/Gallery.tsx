@@ -4,6 +4,7 @@ import type { Image } from "../utils/image-data.ts";
 
 const Gallery = (): React.ReactElement => {
   const initialCategory = ImageCategory.Other;
+
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([
     initialCategory,
@@ -61,11 +62,11 @@ const Gallery = (): React.ReactElement => {
 
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              isExpanded ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+              isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div
-              className={`columns-1 gap-4 [&>img:not(:first-child)]:mt-8 ${
+              className={`columns-1 gap-3 [&>img:not(:first-child)]:mt-4 ${
                 imagesCount >= 3
                   ? "md:columns-2 lg:columns-3"
                   : "md:columns-2 lg:columns-2"

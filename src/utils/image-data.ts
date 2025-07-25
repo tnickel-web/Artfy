@@ -6,7 +6,6 @@ import octopusImg from "/bilder/octopus.jpg";
 import sunflowerImg from "/bilder/sunflower.jpg";
 import sunflower2Img from "/bilder/sunflower2.jpg";
 import unicornImg from "/bilder/unicorn.jpg";
-import womanImg from "/bilder/woman.jpg";
 import waldImg from "/bilder/wald.jpg";
 import whiskeyImg from "/bilder/whiskey.jpg";
 import leavesImg from "/bilder/leaves.jpg";
@@ -25,44 +24,40 @@ export interface Image {
 }
 
 export enum ImageCategory {
-  Other = "Andere",
-  WallArt = "Wandgemälde",
+  Kids = "Kinderzimmer & Kitas",
+  Business = "Geschäftsräume & Lagerhallen",
+  Other = "Wohnräume, Streetart und Muster",
 }
 
 export const images: Image[] = [
   {
     src: leavesImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Blätter",
   },
   {
     src: spaceImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Kids,
     alt: "Wandmalerei von Weltraum",
   },
   {
     src: whaleImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Wal",
   },
   {
     src: whale2Img,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Wal 2",
+    category: ImageCategory.Kids,
+    alt: "Zweite Wandmalerei von Wal",
   },
   {
     src: whale3Img,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Wal 3",
   },
   {
-    src: rochenImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Rochen",
-  },
-  {
     src: octopusImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Oktopus",
   },
   {
@@ -72,57 +67,57 @@ export const images: Image[] = [
   },
   {
     src: sunflower2Img,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Sonnenblume 2",
   },
   {
     src: unicornImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Kids,
     alt: "Wandmalerei von Einhorn",
   },
   {
-    src: womanImg,
-    category: ImageCategory.Other,
-    alt: "Malerei von Frau",
-  },
-  {
     src: waldImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Kids,
     alt: "Wandmalerei von Wald",
   },
   {
     src: whiskeyImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Whiskey",
   },
   {
     src: kidsRoomImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei in Spielzimmer mit Computertisch",
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
   },
   {
     src: featherImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Feder",
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
   },
   {
     src: gymImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei in Sportstudio",
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
   },
   {
     src: tabaklagerImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Business,
     alt: "Wandmalerei in Tabaklager",
   },
   {
+    src: rochenImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei von Rochen",
+  },
+  {
     src: musterImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei (Musterfoto)",
   },
   {
     src: squidImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Tintenfisch",
   },
 ];

@@ -15,10 +15,11 @@ export const Me = (): React.ReactElement => {
             <p>
               Hier werden individuelle Wandgestaltungen, kreative Murals und
               lebendige Fassadengestaltungen mit Farbe - innen sowie außen -
-              umgesetzt. Ob im Kinderzimmer, Café, Büro oder Hallen. Quasi
-              überall, wo Wandflächen stehen. Mit meiner Erfahrung, Ideen und
-              Leidenschaft gestalte ich Wandbilder, die Räume verwandeln, nach
-              deiner Vorstellung oder mit meinem kreativen Konzept.
+              umgesetzt. Ob im Kinderzimmer, Café, Büro oder in Hallen. Quasi
+              überall, wo Wandflächen stehen. Mit meiner Erfahrung, meinen Ideen
+              und meiner Leidenschaft gestalte ich Wandbilder, die ganze Räume
+              verwandeln, nach deiner Vorstellung oder mit meinem kreativen
+              Konzept.
             </p>
           </div>
 
@@ -28,7 +29,7 @@ export const Me = (): React.ReactElement => {
             <p>
               Ich bin Tamara Akova (Tammi) - Malermeisterin und freiberufliche
               Künstlerin. Seit 2024 bin ich selbstständig mit dem was mich
-              begeistert: Wandmalerei, Mural art und Fassadengestaltung. Ich
+              begeistert: Wandmalerei, Mural Art und Fassadengestaltung. Ich
               verbinde mein handwerkliches und künstlerisches Wissen, um
               Wandflächen kreativ zu gestalten.
             </p>

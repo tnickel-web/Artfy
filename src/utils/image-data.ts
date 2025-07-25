@@ -30,25 +30,63 @@ export enum ImageCategory {
 }
 
 export const images: Image[] = [
-  {
-    src: leavesImg,
-    category: ImageCategory.Other,
-    alt: "Wandmalerei von Blätter",
-  },
+  // KIDS
   {
     src: spaceImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Weltraum",
   },
   {
-    src: whaleImg,
-    category: ImageCategory.Other,
-    alt: "Wandmalerei von Wal",
-  },
-  {
     src: whale2Img,
     category: ImageCategory.Kids,
     alt: "Zweite Wandmalerei von Wal",
+  },
+  {
+    src: unicornImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Einhorn",
+  },
+  {
+    src: waldImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wald",
+  },
+  {
+    src: kidsRoomImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: featherImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
+  },
+  {
+    src: gymImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
+  },
+  // BUSINESS
+  {
+    src: tabaklagerImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei in Tabaklager",
+  },
+  {
+    src: rochenImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei von Rochen",
+  },
+  // OTHER
+  {
+    src: leavesImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Blätter",
+  },
+  {
+    src: whaleImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Wal",
   },
   {
     src: whale3Img,
@@ -71,44 +109,9 @@ export const images: Image[] = [
     alt: "Wandmalerei von Sonnenblume 2",
   },
   {
-    src: unicornImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Einhorn",
-  },
-  {
-    src: waldImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Wald",
-  },
-  {
     src: whiskeyImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von Whiskey",
-  },
-  {
-    src: kidsRoomImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
-  },
-  {
-    src: featherImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
-  },
-  {
-    src: gymImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
-  },
-  {
-    src: tabaklagerImg,
-    category: ImageCategory.Business,
-    alt: "Wandmalerei in Tabaklager",
-  },
-  {
-    src: rochenImg,
-    category: ImageCategory.Business,
-    alt: "Wandmalerei von Rochen",
   },
   {
     src: musterImg,

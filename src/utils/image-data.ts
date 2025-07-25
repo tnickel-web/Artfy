@@ -17,6 +17,7 @@ import tabaklagerImg from "/bilder/tabaklager.jpg";
 import musterImg from "/bilder/muster.jpg";
 import squidImg from "/bilder/squid.jpg";
 import bigLeafImg from "/bilder/big-leaf.jpg";
+import houseWallImg from "/bilder/house-wall.jpg";
 
 export interface Image {
   src: string;
@@ -71,6 +72,11 @@ export const images: Image[] = [
     src: bigLeafImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
+  },
+  {
+    src: rochenImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Rochen",
   },
   // BUSINESS
   {
@@ -133,5 +139,10 @@ export const images: Image[] = [
     src: squidImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von Tintenfisch",
+  },
+  {
+    src: houseWallImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Gänseblümchen an Hauswand (Musterfoto)",
   },
 ];

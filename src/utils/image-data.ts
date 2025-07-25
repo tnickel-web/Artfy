@@ -16,6 +16,7 @@ import gymImg from "/bilder/gym.jpg";
 import tabaklagerImg from "/bilder/tabaklager.jpg";
 import musterImg from "/bilder/muster.jpg";
 import squidImg from "/bilder/squid.jpg";
+import bigLeafImg from "/bilder/big-leaf.jpg";
 
 export interface Image {
   src: string;
@@ -26,11 +27,16 @@ export interface Image {
 export enum ImageCategory {
   Kids = "Kinderzimmer & Kitas",
   Business = "Geschäftsräume & Lagerhallen",
-  Other = "Wohnräume, Streetart und Muster",
+  Other = "Wohnräume, Street Art und Muster",
 }
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: gymImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
+  },
   {
     src: spaceImg,
     category: ImageCategory.Kids,
@@ -62,20 +68,25 @@ export const images: Image[] = [
     alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
   },
   {
-    src: gymImg,
+    src: bigLeafImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
+    alt: "Wandmalerei von großem Blatt",
   },
   // BUSINESS
-  {
-    src: tabaklagerImg,
-    category: ImageCategory.Business,
-    alt: "Wandmalerei in Tabaklager",
-  },
   {
     src: rochenImg,
     category: ImageCategory.Business,
     alt: "Wandmalerei von Rochen",
+  },
+  {
+    src: bigLeafImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
+    src: tabaklagerImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei in Tabaklager",
   },
   // OTHER
   {

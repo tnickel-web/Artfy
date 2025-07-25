@@ -67,9 +67,9 @@ const Gallery = (): React.ReactElement => {
           >
             <div
               className={`columns-1 gap-3 [&>img:not(:first-child)]:mt-4 ${
-                imagesCount >= 3
-                  ? "md:columns-2 lg:columns-3"
-                  : "md:columns-2 lg:columns-2"
+                imagesCount >= 4
+                  ? "md:columns-2 lg:columns-4"
+                  : "md:columns-2 lg:columns-3"
               }`}
             >
               {renderImagesByCategory(category as ImageCategory)}

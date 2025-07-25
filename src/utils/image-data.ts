@@ -16,6 +16,7 @@ import featherImg from "/bilder/feather.jpg";
 import gymImg from "/bilder/gym.jpg";
 import tabaklagerImg from "/bilder/tabaklager.jpg";
 import musterImg from "/bilder/muster.jpg";
+import squidImg from "/bilder/squid.jpg";
 
 export interface Image {
   src: string;
@@ -118,5 +119,10 @@ export const images: Image[] = [
     src: musterImg,
     category: ImageCategory.WallArt,
     alt: "Wandmalerei (Musterfoto)",
+  },
+  {
+    src: squidImg,
+    category: ImageCategory.WallArt,
+    alt: "Wandmalerei von Tintenfisch",
   },
 ];

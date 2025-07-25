@@ -8,41 +8,29 @@ export const Me = (): React.ReactElement => {
       className="relative bg-cover bg-center py-10 flex-grow w-full"
     >
       <div className="container mx-auto px-4 bg-base-100 shadow-lg rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {/* Erste Reihe - volle Breite */}
-          <div className="col-span-1 md:col-span-2">
-            <h1 className="text-2xl font-bold mb-4 mt-4">Moin :)</h1>
-            <p className="mb-4">
-              Schön, dass du auf meiner Webseite gelandet bist! Hier erzähle ich
-              dir, was ich Kreatives mache und wie du mich erreichen kannst.
-            </p>
-            <p className="mb-4">
-              Von gemütlichen Kinderzimmern über stilvolle Restaurants bis hin
-              zu modernen Einrichtungen: Ich biete Wandmalerei für die
-              unterschiedlichsten Räume und Anlässe an. Jede Fläche hat ihren
-              eigenen Charakter, und mit meiner Erfahrung und gezielter Farbwahl
-              bringe ich sie auf eine ganz besondere Weise zum Strahlen.
-            </p>
+          <div className="col-span-2">
+            <h1 className="text-2xl font-bold mb-4 mt-4">Moin!</h1>
             <p>
-              Als erfahrene Malermeisterin und Wandgestalterin weiß ich, wie ich
-              mit Untergrund, Farben und Formen umgehe, um aus einer schlichten
-              Fläche ein Kunstwerk zu zaubern. Egal, ob du schon eine klare Idee
-              hast oder mir gestalterische Freiheit lässt – wir arbeiten Hand in
-              Hand, um ein Ergebnis zu schaffen, das perfekt zu dir und deinem
-              Raum passt.
+              Hier werden individuelle Wandgestaltungen, kreative Murals und
+              lebendige Fassadengestaltungen mit Farbe - innen sowie außen -
+              umgesetzt. Ob im Kinderzimmer, Café, Büro oder Hallen. Quasi
+              überall, wo Wandflächen stehen. Mit meiner Erfahrung, Ideen und
+              Leidenschaft gestalte ich Wandbilder, die Räume verwandeln, nach
+              deiner Vorstellung oder mit meinem kreativen Konzept.
             </p>
           </div>
 
           {/* Zweite Reihe - Text links, Bild rechts */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Das bin ich</h2>
+          <div className="col-span-1 self-center">
+            <h2 className="text-xl font-bold mb-4">Über mich</h2>
             <p>
-              Ich bin Tamara Akova, aber die meisten nennen mich „Tammi&#34;.
-              2015 habe ich meine Ausbildung als Malerin und Lackiererin
-              gestartet, und nach bestandener Prüfung und zwei spannenden
-              Berufsjahren war für mich klar, dass ich noch einen Schritt
-              weitergehen möchte. 2022 – pünktlich zum Valentinstag – hielt ich
-              stolz meinen Meisterbrief in der Hand.
+              Ich bin Tamara Akova (Tammi) - Malermeisterin und freiberufliche
+              Künstlerin. Seit 2024 bin ich selbstständig mit dem was mich
+              begeistert: Wandmalerei, Mural art und Fassadengestaltung. Ich
+              verbinde mein handwerkliches und künstlerisches Wissen, um
+              Wandflächen kreativ zu gestalten.
             </p>
           </div>
           <div className="flex justify-center items-center">
@@ -54,26 +42,14 @@ export const Me = (): React.ReactElement => {
           </div>
 
           {/* Dritte Reihe - volle Breite */}
-          <div className="col-span-1 md:col-span-2">
-            <p className="mb-4">
-              Nach weiteren zwei Jahren voller toller Projekte und viel
-              Erfahrung habe ich mich spontan dazu entschlossen, mich
-              selbstständig zu machen. Seitdem gestalte ich mit Herzblut Wände,
-              die nicht nur schön aussehen, sondern auch Geschichten erzählen.
-              Die Idee zur Selbstständigkeit kam, als ich mit Freunden ein
-              Atelier eröffnete. Dieser kreative Ort hat mich inspiriert und
-              bestärkt, meiner Leidenschaft für Wandmalerei voll und ganz
-              nachzugehen. Und hier bin ich, bereit, deine Wand in ein buntes
-              Kunstwerk zu verwandeln!
-            </p>
-            <h2 className="text-xl font-bold mb-4">So wird deine Wand bunt</h2>
+          <div className="col-span-2">
+            <h2 className="text-xl font-bold mb-4">Bereit für Farbe?</h2>
             <p className="mb-4">
               Ob du schon eine klare Vorstellung hast oder mir einfach freie
-              Hand lassen möchtest – melde dich gerne! Wir machen einen
-              unverbindlichen Termin aus und besprechen in Ruhe deine Ideen und
-              meine Vorschläge. Die Preise richten sich nach dem Aufwand, der
-              Größe und dem Detailgrad des Projekts. Wenn alles passt, legen wir
-              los und schon bald erstrahlt deine Wand in bunten Farben!
+              Hand lassen möchtest. Wir machen einen unverbindlichen Termin aus
+              und besprechen deine Ideen und meine Vorschläge. Die Preise
+              richten sich nach Aufwand, Größe und dem Detailgrad des Projekts.
+              Wenn alles passt, wird schon bald bunt auf deiner Wand.
             </p>
           </div>
         </div>

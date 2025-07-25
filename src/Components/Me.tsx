@@ -13,13 +13,11 @@ export const Me = (): React.ReactElement => {
           <div className="col-span-2">
             <h1 className="text-2xl font-bold mb-4 mt-4">Moin!</h1>
             <p>
-              Hier werden individuelle Wandgestaltungen, kreative Murals und
-              lebendige Fassadengestaltungen mit Farbe - innen sowie außen -
-              umgesetzt. Ob im Kinderzimmer, Café, Büro oder in Hallen. Quasi
-              überall, wo Wandflächen stehen. Mit meiner Erfahrung, meinen Ideen
-              und meiner Leidenschaft gestalte ich Wandbilder, die ganze Räume
-              verwandeln, nach deiner Vorstellung oder mit meinem kreativen
-              Konzept.
+              Hier werden Wandflächen kreativ mit Murals gestaltet. Ob im
+              Kinderzimmer, Café, Büro oder in Hallen. Quasi überall, wo
+              Wandflächen stehen. Mit meiner Erfahrung, meinen Ideen und meiner
+              Leidenschaft gestalte ich Wandbilder, die ganze Räume verwandeln,
+              nach deiner Vorstellung oder mit meinem kreativen Konzept.
             </p>
           </div>
 

@@ -37,11 +37,6 @@ export const images: Image[] = [
     alt: "Wandmalerei von Weltraum",
   },
   {
-    src: whale2Img,
-    category: ImageCategory.Kids,
-    alt: "Zweite Wandmalerei von Wal",
-  },
-  {
     src: unicornImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Einhorn",
@@ -50,6 +45,11 @@ export const images: Image[] = [
     src: waldImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Wald",
+  },
+  {
+    src: whale2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wal",
   },
   {
     src: kidsRoomImg,
@@ -79,6 +79,16 @@ export const images: Image[] = [
   },
   // OTHER
   {
+    src: sunflowerImg,
+    category: ImageCategory.Other,
+    alt: "Malerei von Sonnenblume",
+  },
+  {
+    src: whiskeyImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Whiskey",
+  },
+  {
     src: leavesImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von Blätter",
@@ -99,19 +109,9 @@ export const images: Image[] = [
     alt: "Wandmalerei von Oktopus",
   },
   {
-    src: sunflowerImg,
-    category: ImageCategory.Other,
-    alt: "Malerei von Sonnenblume",
-  },
-  {
     src: sunflower2Img,
     category: ImageCategory.Other,
     alt: "Wandmalerei von Sonnenblume 2",
-  },
-  {
-    src: whiskeyImg,
-    category: ImageCategory.Other,
-    alt: "Wandmalerei von Whiskey",
   },
   {
     src: musterImg,

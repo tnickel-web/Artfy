@@ -49,7 +49,7 @@ export const Me = (): React.ReactElement => {
               Hand lassen möchtest. Wir machen einen unverbindlichen Termin aus
               und besprechen deine Ideen und meine Vorschläge. Die Preise
               richten sich nach Aufwand, Größe und dem Detailgrad des Projekts.
-              Wenn alles passt, wird schon bald bunt auf deiner Wand.
+              Wenn alles passt, wird es schon bald bunt auf deiner Wand.
             </p>
           </div>
         </div>

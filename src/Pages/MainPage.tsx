@@ -28,10 +28,10 @@ function App(): React.ReactElement {
 function Header(): React.ReactElement {
   return (
     <section id="header">
-      <header className="grid grid-cols-1 place-items-center relative justify-center py-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
+      <header className="grid grid-cols-1 place-items-center relative justify-center pt-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
         <img
           className="mt-8 sm:mt-6 px-4 sm:px-6
-           w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
+           w-1/2"
           src={headerImg}
           width="100%"
           height="100%"

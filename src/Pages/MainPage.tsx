@@ -7,16 +7,16 @@ import PersonalInformation from "../utils/personal-information.ts";
 import headerImg from "/Header.png";
 import titelUnterImg from "/titel_unter.png";
 
-function App(): React.ReactElement {
+export default function App(): React.ReactElement {
   return (
     <div
-      className="bg-base-200 min-h-screen flex flex-col bg-cover lg:bg-center xl:bg-left-bottom bg-no-repeat bg-fixed relative"
+      className="min-h-screen flex flex-col lg:bg-cover bg-no-repeat bg-fixed relative"
       style={{
         backgroundImage: "url('bg-new.jpg')",
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-5 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"></div>
 
       {/* Content with higher z-index */}
       <div className="relative z-10 flex flex-col min-h-screen">
@@ -118,5 +118,3 @@ function Footer(): React.ReactElement {
     </footer>
   );
 }
-
-export default App;

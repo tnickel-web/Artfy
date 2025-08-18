@@ -18,6 +18,15 @@ import musterImg from "/bilder/muster.jpg";
 import squidImg from "/bilder/squid.jpg";
 import bigLeafImg from "/bilder/big-leaf.jpg";
 import houseWallImg from "/bilder/house-wall.jpg";
+import legoImg from "/bilder/lego.jpg";
+import sos1 from "/bilder/sos1.jpg";
+import sos2 from "/bilder/sos2.jpg";
+import sos3 from "/bilder/sos3.jpg";
+import sos4 from "/bilder/sos4.jpg";
+import sos5 from "/bilder/sos5.jpg";
+import sos6 from "/bilder/sos6.jpg";
+import sos7 from "/bilder/sos7.jpg";
+import sos8 from "/bilder/sos8.jpg";
 
 export interface Image {
   src: string;
@@ -27,8 +36,9 @@ export interface Image {
 
 export enum ImageCategory {
   Kids = "Kinderzimmer & Kitas",
-  Business = "Geschäftsräume & Lagerhallen",
+  SOS = "SOS-Kinderdorf",
   Other = "Wohnräume, Street Art und Muster",
+  Business = "Geschäftsräume & Lagerhallen",
 }
 
 export const images: Image[] = [
@@ -78,6 +88,11 @@ export const images: Image[] = [
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Rochen",
   },
+  {
+    src: legoImg,
+    category: ImageCategory.Kids,
+    alt: "Wandbild Lego Ninjas",
+  },
   // BUSINESS
   {
     src: rochenImg,
@@ -93,6 +108,62 @@ export const images: Image[] = [
     src: tabaklagerImg,
     category: ImageCategory.Business,
     alt: "Wandmalerei in Tabaklager",
+  },
+  // SOS-Kinderdorf
+  {
+    src: gymImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
+  },
+  {
+    src: kidsRoomImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: featherImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
+  },
+  {
+    src: sos1,
+    category: ImageCategory.SOS,
+    alt: "Willkommensbereich Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos2,
+    category: ImageCategory.SOS,
+    alt: "Flur Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos3,
+    category: ImageCategory.SOS,
+    alt: "Tür Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos4,
+    category: ImageCategory.SOS,
+    alt: "Essensbereich Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos5,
+    category: ImageCategory.SOS,
+    alt: "Kreativraum Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos6,
+    category: ImageCategory.SOS,
+    alt: "Tür Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos7,
+    category: ImageCategory.SOS,
+    alt: "Sportraum Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos8,
+    category: ImageCategory.SOS,
+    alt: "Flur Federn (SOS-Kinderdorf)",
   },
   // OTHER
   {

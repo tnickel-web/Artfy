@@ -10,17 +10,21 @@ import titelUnterImg from "/titel_unter.png";
 function App(): React.ReactElement {
   return (
     <div
+      className="bg-base-200 min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed relative"
       style={{
-        backgroundImage: "url('background_horizontal.jpg')",
-        backgroundRepeat: "repeat-y",
-        backgroundSize: "100% auto",
+        backgroundImage: "url('bg-new.jpg')",
       }}
-      className="bg-base-200 min-h-screen flex flex-col"
     >
-      <Header />
-      <Navigation />
-      <MainContent />
-      <Footer />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-5 pointer-events-none"></div>
+
+      {/* Content with higher z-index */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Header />
+        <Navigation />
+        <MainContent />
+        <Footer />
+      </div>
     </div>
   );
 }

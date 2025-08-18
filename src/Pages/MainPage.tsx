@@ -10,7 +10,7 @@ import titelUnterImg from "/titel_unter.png";
 function App(): React.ReactElement {
   return (
     <div
-      className="bg-base-200 min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed relative"
+      className="bg-base-200 min-h-screen flex flex-col bg-cover lg:bg-center xl:bg-left-bottom bg-no-repeat bg-fixed relative"
       style={{
         backgroundImage: "url('bg-new.jpg')",
       }}

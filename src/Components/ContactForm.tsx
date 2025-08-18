@@ -1,14 +1,9 @@
 import emailjs from "@emailjs/browser";
-import React, {
-  createRef,
-  FormEvent,
-  LegacyRef,
-  useEffect,
-  useState,
-} from "react";
+import React, { createRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import SocialContactButtons from "./SocialContactButtons";
-import PersonalInformation from "./PersonalInformation";
+import PersonalInformation from "../utils/personal-information.ts";
+import SocialContactButtons from "./SocialContactButtons.tsx";
+import type { FormEvent, LegacyRef } from "react";
 
 interface CustomFormData extends FormData {
   name: string;
@@ -30,14 +25,14 @@ const ContactForm: React.FC = () => {
 
   const formRef: LegacyRef<HTMLFormElement> = createRef();
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     const phoneOrEmailMissing: boolean = !formData.phone && !formData.email;
     if (!isChecked) {
       setFormError("Bitte stimmen Sie der Datenverarbeitung zu.");
     } else if (phoneOrEmailMissing) {
       setFormError(
-        "Es muss entweder eine Email oder Telefonnummer angegeben werden"
+        "Es muss entweder eine Email oder Telefonnummer angegeben werden",
       );
     } else if (formRef.current) {
       setFormError("");
@@ -47,33 +42,32 @@ const ContactForm: React.FC = () => {
           import.meta.env.VITE_SERVICE_ID,
           import.meta.env.VITE_TEMPLATE_ID,
           formRef.current,
-          import.meta.env.VITE_OPTIONS
+          import.meta.env.VITE_OPTIONS,
         )
         .then(
           (_) => {
             toast.success("Email wurde versendet!", {
               style: {
-                background: "bg-base-300", // Beispiel für Tailwind-Farbe
+                background: "bg-base-300",
                 color: "#000",
                 borderRadius: "0.5rem",
               },
               duration: 5000,
             });
           },
-          (error) => {
-            console.log("Error" + error);
+          () => {
             toast.error(
               `Email konnte nicht versendet werden! Schick mir doch direkt eine Email an ${PersonalInformation.email}.`,
               {
                 style: {
-                  background: "bg-base-300", // Beispiel für Tailwind-Farbe
+                  background: "bg-base-300",
                   color: "#000",
                   borderRadius: "0.5rem",
                 },
                 duration: 10000,
-              }
+              },
             );
-          }
+          },
         );
     } else {
       toast.error("Bitte stimmen Sie der Datenverarbeitung zu.");
@@ -83,8 +77,8 @@ const ContactForm: React.FC = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ): void => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -92,7 +86,7 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleCheckboxChange = () => {
+  const handleCheckboxChange = (): void => {
     setIsChecked(!isChecked);
   };
 

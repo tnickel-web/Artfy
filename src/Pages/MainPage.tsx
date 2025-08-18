@@ -1,53 +1,65 @@
 import React from "react";
-import ContactForm from "./ContactForm";
-import InstagramFeed from "./InstagramFeed";
-import { Me } from "./Me";
-import Navigation from "./Navigation";
-import Gallery from "./ImageSlider";
-import PersonalInformation from "./PersonalInformation";
+import ContactForm from "../Components/ContactForm.tsx";
+import { Me } from "../Components/Me.tsx";
+import Navigation from "../Components/Navigation.tsx";
+import Gallery from "../Components/Gallery.tsx";
+import PersonalInformation from "../utils/personal-information.ts";
+import headerImg from "/Header.png";
+import titelUnterImg from "/titel_unter.png";
 
-function App(): React.ReactElement {
+export default function App(): React.ReactElement {
   return (
     <div
+      className="min-h-screen flex flex-col lg:bg-cover bg-no-repeat bg-fixed relative"
       style={{
-        backgroundImage: "url('background_horizontal.png')",
-        backgroundRepeat: "repeat-y",
-        backgroundSize: "100% auto",
+        backgroundImage: "url('bg-new.jpg')",
       }}
-      className="bg-base-200 min-h-screen flex flex-col"
     >
-      <Header />
-      <Navigation />
-      <MainContent />
-      <Footer />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"></div>
+
+      {/* Content with higher z-index */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Header />
+        <Navigation />
+        <MainContent />
+        <Footer />
+      </div>
     </div>
   );
 }
 
-function Header() {
+function Header(): React.ReactElement {
   return (
     <section id="header">
-      <header className="grid grid-cols-1 place-items-center  relative  justify-center py-20 items-center bg-cover bg-center">
+      <header className="grid grid-cols-1 place-items-center relative justify-center pt-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
         <img
-          className="mt-14 sm:mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-          src="Header.png"
-          alt="Beschreibung"
+          className="mt-8 sm:mt-6 px-4 sm:px-6
+           w-1/2"
+          src={headerImg}
+          width="100%"
+          height="100%"
+          alt="Artfy Logo"
         ></img>
+
         <img
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-3/12"
-          src="titel_unter.png"
-          alt="Beschreibung"
+          className="mt-8 sm:mt-6 px-4 sm:px-6
+           w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
+          src={titelUnterImg}
+          width="100%"
+          height="100%"
+          alt="Bereit, für kreative Wände? :)"
         ></img>
       </header>
     </section>
   );
 }
 
-function MainContent() {
+function MainContent(): React.ReactElement {
   return (
-    <div className="w-30 min-h-screen bg-cover bg-center">
-      <div className="min-h-screen w-full flex flex-col justify-center items-center">
-        <div className=" w-3/3 lg:w-1/3 md:w-2/3 xs:w-3/3 mx-5 lg:mx-24">
+    <div className="min-h-screen bg-cover bg-center">
+      <div className="min-h-screen flex flex-col justify-center items-center">
+        <div className="w-full max-w-screen-lg md:max-w-[800px] lg:max-w-[1000px] mx-auto p-4">
           <Me />
           <Gallery />
           <ContactForm />
@@ -57,7 +69,7 @@ function MainContent() {
   );
 }
 
-function Footer() {
+function Footer(): React.ReactElement {
   return (
     <footer id="footer" className="bg-neutral text-neutral-content py-6">
       <div className="max-w-7xl mx-auto px-4">
@@ -106,5 +118,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default App;

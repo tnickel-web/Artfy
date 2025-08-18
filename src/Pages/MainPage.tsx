@@ -7,20 +7,24 @@ import PersonalInformation from "../utils/personal-information.ts";
 import headerImg from "/Header.png";
 import titelUnterImg from "/titel_unter.png";
 
-function App(): React.ReactElement {
+export default function App(): React.ReactElement {
   return (
     <div
+      className="min-h-screen flex flex-col lg:bg-cover bg-no-repeat bg-fixed relative"
       style={{
-        backgroundImage: "url('background_horizontal.jpg')",
-        backgroundRepeat: "repeat-y",
-        backgroundSize: "100% auto",
+        backgroundImage: "url('bg-new.jpg')",
       }}
-      className="bg-base-200 min-h-screen flex flex-col"
     >
-      <Header />
-      <Navigation />
-      <MainContent />
-      <Footer />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"></div>
+
+      {/* Content with higher z-index */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Header />
+        <Navigation />
+        <MainContent />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -28,10 +32,10 @@ function App(): React.ReactElement {
 function Header(): React.ReactElement {
   return (
     <section id="header">
-      <header className="grid grid-cols-1 place-items-center relative justify-center py-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
+      <header className="grid grid-cols-1 place-items-center relative justify-center pt-20 items-center bg-cover bg-center max-w-screen-lg mx-auto">
         <img
           className="mt-8 sm:mt-6 px-4 sm:px-6
-           w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/1"
+           w-1/2"
           src={headerImg}
           width="100%"
           height="100%"
@@ -114,5 +118,3 @@ function Footer(): React.ReactElement {
     </footer>
   );
 }
-
-export default App;

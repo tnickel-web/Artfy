@@ -6,7 +6,6 @@ import octopusImg from "/bilder/octopus.jpg";
 import sunflowerImg from "/bilder/sunflower.jpg";
 import sunflower2Img from "/bilder/sunflower2.jpg";
 import unicornImg from "/bilder/unicorn.jpg";
-import womanImg from "/bilder/woman.jpg";
 import waldImg from "/bilder/wald.jpg";
 import whiskeyImg from "/bilder/whiskey.jpg";
 import leavesImg from "/bilder/leaves.jpg";
@@ -16,6 +15,18 @@ import featherImg from "/bilder/feather.jpg";
 import gymImg from "/bilder/gym.jpg";
 import tabaklagerImg from "/bilder/tabaklager.jpg";
 import musterImg from "/bilder/muster.jpg";
+import squidImg from "/bilder/squid.jpg";
+import bigLeafImg from "/bilder/big-leaf.jpg";
+import houseWallImg from "/bilder/house-wall.jpg";
+import legoImg from "/bilder/lego.jpg";
+import sos1 from "/bilder/sos1.jpg";
+import sos2 from "/bilder/sos2.jpg";
+import sos3 from "/bilder/sos3.jpg";
+import sos4 from "/bilder/sos4.jpg";
+import sos5 from "/bilder/sos5.jpg";
+import sos6 from "/bilder/sos6.jpg";
+import sos7 from "/bilder/sos7.jpg";
+import sos8 from "/bilder/sos8.jpg";
 
 export interface Image {
   src: string;
@@ -24,99 +35,185 @@ export interface Image {
 }
 
 export enum ImageCategory {
-  Other = "Andere",
-  WallArt = "Wandgemälde",
+  Kids = "Kinderzimmer & Kitas",
+  SOS = "SOS-Kinderdorf",
+  Other = "Wohnräume, Street Art und Muster",
+  Business = "Geschäftsräume & Lagerhallen",
 }
 
 export const images: Image[] = [
+  // KIDS
   {
-    src: leavesImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Blätter",
+    src: gymImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
   },
   {
     src: spaceImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Kids,
     alt: "Wandmalerei von Weltraum",
   },
   {
-    src: whaleImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Wal",
+    src: unicornImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Einhorn",
+  },
+  {
+    src: waldImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wald",
   },
   {
     src: whale2Img,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Wal 2",
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wal",
   },
   {
-    src: whale3Img,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Wal 3",
+    src: kidsRoomImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: featherImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
+  },
+  {
+    src: bigLeafImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: rochenImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Kids,
     alt: "Wandmalerei von Rochen",
   },
   {
-    src: octopusImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Oktopus",
+    src: legoImg,
+    category: ImageCategory.Kids,
+    alt: "Wandbild Lego Ninjas",
   },
+  // BUSINESS
+  {
+    src: rochenImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei von Rochen",
+  },
+  {
+    src: bigLeafImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
+    src: tabaklagerImg,
+    category: ImageCategory.Business,
+    alt: "Wandmalerei in Tabaklager",
+  },
+  // SOS-Kinderdorf
+  {
+    src: gymImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
+  },
+  {
+    src: kidsRoomImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: featherImg,
+    category: ImageCategory.SOS,
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
+  },
+  {
+    src: sos1,
+    category: ImageCategory.SOS,
+    alt: "Willkommensbereich Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos2,
+    category: ImageCategory.SOS,
+    alt: "Flur Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos3,
+    category: ImageCategory.SOS,
+    alt: "Tür Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos4,
+    category: ImageCategory.SOS,
+    alt: "Essensbereich Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos5,
+    category: ImageCategory.SOS,
+    alt: "Kreativraum Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos6,
+    category: ImageCategory.SOS,
+    alt: "Tür Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos7,
+    category: ImageCategory.SOS,
+    alt: "Sportraum Federn (SOS-Kinderdorf)",
+  },
+  {
+    src: sos8,
+    category: ImageCategory.SOS,
+    alt: "Flur Federn (SOS-Kinderdorf)",
+  },
+  // OTHER
   {
     src: sunflowerImg,
     category: ImageCategory.Other,
     alt: "Malerei von Sonnenblume",
   },
   {
-    src: sunflower2Img,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Sonnenblume 2",
-  },
-  {
-    src: unicornImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Einhorn",
-  },
-  {
-    src: womanImg,
-    category: ImageCategory.Other,
-    alt: "Malerei von Frau",
-  },
-  {
-    src: waldImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Wald",
-  },
-  {
     src: whiskeyImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei von Whiskey",
   },
   {
-    src: kidsRoomImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei in Spielzimmer mit Computertisch",
+    src: leavesImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Blätter",
   },
   {
-    src: featherImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei von Feder",
+    src: whaleImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Wal",
   },
   {
-    src: gymImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei in Sportstudio",
+    src: whale3Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Wal 3",
   },
   {
-    src: tabaklagerImg,
-    category: ImageCategory.WallArt,
-    alt: "Wandmalerei in Tabaklager",
+    src: octopusImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Oktopus",
+  },
+  {
+    src: sunflower2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Sonnenblume 2",
   },
   {
     src: musterImg,
-    category: ImageCategory.WallArt,
+    category: ImageCategory.Other,
     alt: "Wandmalerei (Musterfoto)",
+  },
+  {
+    src: squidImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Tintenfisch",
+  },
+  {
+    src: houseWallImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Gänseblümchen an Hauswand (Musterfoto)",
   },
 ];

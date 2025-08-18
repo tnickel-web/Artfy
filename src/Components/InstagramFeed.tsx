@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { ReactElement } from "react";
 import { InstagramEmbed } from "react-social-media-embed";
+import type { ReactElement } from "react";
 
 const InstagramFeed = (): ReactElement => {
   useEffect(() => {
     const divs = document.querySelectorAll("div");
 
-    // Durch die divs iterieren und nach dem Inhalt suchen
     divs.forEach((div) => {
       if (
         div.textContent &&
@@ -16,6 +15,7 @@ const InstagramFeed = (): ReactElement => {
       }
     });
   }, []);
+
   return (
     <section
       id="instaFeed"

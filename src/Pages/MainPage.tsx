@@ -39,7 +39,7 @@ function Header(): React.ReactElement {
           src={headerImg}
           width="100%"
           height="100%"
-          alt="Artfy Logo"
+          alt="Tamyluga Logo"
         ></img>
 
         <img

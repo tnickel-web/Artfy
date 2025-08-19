@@ -26,7 +26,7 @@ const InstagramFeed = (): ReactElement => {
         <div className="flex justify-center">
           <InstagramEmbed
             className="w-full px-5"
-            url="https://www.instagram.com/artfy.hb"
+            url="https://www.instagram.com/tamy.luga"
           />
         </div>
       </div>

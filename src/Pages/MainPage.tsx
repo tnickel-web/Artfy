@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation.tsx";
 import Gallery from "../Components/Gallery.tsx";
 import PersonalInformation from "../utils/personal-information.ts";
 import headerImg from "/Header.png";
-import titelUnterImg from "/titel_unter.png";
+import titelUnterImg from "/titel_unter_alt.png";
 
 export default function App(): React.ReactElement {
   return (
@@ -48,7 +48,7 @@ function Header(): React.ReactElement {
           src={titelUnterImg}
           width="100%"
           height="100%"
-          alt="Bereit, für kreative Wände? :)"
+          alt="Bereit, für kreative Wände?"
         ></img>
       </header>
     </section>

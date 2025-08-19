@@ -16,7 +16,7 @@ export default function App(): React.ReactElement {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-5 pointer-events-none"></div>
 
       {/* Content with higher z-index */}
       <div className="relative z-10 flex flex-col min-h-screen">

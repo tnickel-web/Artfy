@@ -70,6 +70,8 @@ function MainContent(): React.ReactElement {
 }
 
 function Footer(): React.ReactElement {
+  const year: number = new Date().getFullYear();
+
   return (
     <footer id="footer" className="bg-neutral text-neutral-content py-6">
       <div className="max-w-7xl mx-auto px-4">
@@ -113,7 +115,7 @@ function Footer(): React.ReactElement {
         </div>
       </div>
       <p className="text-center">
-        &copy; 2025 Tamara Akova. Alle Rechte vorbehalten.
+        &copy; {year} Tamara Akova. Alle Rechte vorbehalten.
       </p>
     </footer>
   );

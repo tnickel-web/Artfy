@@ -39,7 +39,7 @@ function Header(): React.ReactElement {
           src={headerImg}
           width="100%"
           height="100%"
-          alt="Tamyluga Logo"
+          alt="Tamyluga - Wandmalerei und Mural Art Bremen, Tamara Akova Malermeisterin"
         ></img>
 
         <img

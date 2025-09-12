@@ -11,7 +11,7 @@ export const Me = (): React.ReactElement => {
         <div className="grid grid-cols-2 gap-6">
           {/* Erste Reihe - volle Breite */}
           <div className="col-span-2">
-            <h1 className="text-2xl font-bold mb-4 mt-4">Moin!</h1>
+            <h2 className="text-2xl font-bold mb-4 mt-4">Moin!</h2>
             <p>
               Hier werden individuelle Wandgestaltungen, kreative Murals und
               lebendige Fassadengestaltungen mit Farbe - innen sowie außen -
@@ -26,7 +26,7 @@ export const Me = (): React.ReactElement => {
           <div className="col-span-1 self-center">
             <h2 className="text-xl font-bold mb-4">Über mich</h2>
             <p>
-              Ich bin Tamara Akova (Tammi) - Malermeisterin und freiberufliche
+              Ich bin Tamara Akova (Tammi), Malermeisterin und freiberufliche
               Künstlerin. Seit 2024 bin ich selbstständig mit dem was mich
               begeistert: Wandmalerei, Mural Art und Fassadengestaltung. Ich
               verbinde mein handwerkliches und künstlerisches Wissen, um

@@ -62,7 +62,7 @@ function MainContent(): React.ReactElement {
       <div className="min-h-screen flex flex-col justify-center items-center">
         <div className="w-full max-w-screen-lg md:max-w-[800px] lg:max-w-[1000px] mx-auto p-4">
           <Hero
-            title="Wandmalerei, Murals und Fassadengestaltung"
+            title="Wandmalerei, Murals & Fassadengestaltung"
             subtitle="von Tamy Luga"
           />
           <Me />

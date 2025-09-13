@@ -54,7 +54,7 @@ const Gallery = (): React.ReactElement => {
         <div key={category} className="mb-4">
           <h3
             onClick={() => toggleCategory(category)}
-            className="cursor-pointer text-2xl font-bold mb-2 text-center bg-gray-200 p-4 rounded-lg
+            className="cursor-pointer text-2xl font-bold mb-2 text-left bg-gray-200 p-4 rounded-lg
             hover:bg-gray-300 transition flex justify-between items-center"
           >
             {category} <span>{isExpanded ? "▲" : "▼"}</span>

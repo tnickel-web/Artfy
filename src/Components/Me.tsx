@@ -11,8 +11,8 @@ export const Me = (): React.ReactElement => {
         <div className="grid grid-cols-2 gap-6">
           {/* Erste Reihe - volle Breite */}
           <div className="col-span-2">
-            <h2 className="text-2xl font-bold mb-4 mt-4">Moin!</h2>
-            <p>
+            <h2 className="text-3xl font-bold mb-4 mt-4">Moin!</h2>
+            <p className="text-lg">
               Hier werden individuelle Wandgestaltungen, kreative Murals und
               lebendige Fassadengestaltungen mit Farbe - innen sowie außen -
               umgesetzt. Ob im Kinderzimmer, Café, Büro oder Hallen. Quasi
@@ -24,8 +24,8 @@ export const Me = (): React.ReactElement => {
 
           {/* Zweite Reihe - Text links, Bild rechts */}
           <div className="col-span-1 self-center">
-            <h2 className="text-xl font-bold mb-4">Über mich</h2>
-            <p>
+            <h2 className="text-2xl font-bold mb-4">Über mich</h2>
+            <p className="text-lg">
               Ich bin Tamara Akova (Tammi), Malermeisterin und freiberufliche
               Künstlerin. Seit 2024 bin ich selbstständig mit dem was mich
               begeistert: Wandmalerei, Mural Art und Fassadengestaltung. Ich
@@ -43,8 +43,8 @@ export const Me = (): React.ReactElement => {
 
           {/* Dritte Reihe - volle Breite */}
           <div className="col-span-2">
-            <h2 className="text-xl font-bold mb-4">Bereit für Farbe?</h2>
-            <p className="mb-4">
+            <h2 className="text-2xl font-bold mb-4">Bereit für Farbe?</h2>
+            <p className="text-lg mb-4">
               Ob du schon eine klare Vorstellung hast oder mir einfach freie
               Hand lassen möchtest. Wir machen einen unverbindlichen Termin aus
               und besprechen deine Ideen und meine Vorschläge. Die Preise

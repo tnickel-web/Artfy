@@ -1,11 +1,12 @@
 import React from "react";
 import ContactForm from "../Components/ContactForm.tsx";
+import Gallery from "../Components/Gallery.tsx";
 import { Me } from "../Components/Me.tsx";
 import Navigation from "../Components/Navigation.tsx";
-import Gallery from "../Components/Gallery.tsx";
 import PersonalInformation from "../utils/personal-information.ts";
 import headerImg from "/Header.png";
 import titelUnterImg from "/titel_unter_alt.png";
+import Hero from "@/Components/Hero.tsx";
 
 export default function App(): React.ReactElement {
   return (
@@ -60,6 +61,10 @@ function MainContent(): React.ReactElement {
     <div className="min-h-screen bg-cover bg-center">
       <div className="min-h-screen flex flex-col justify-center items-center">
         <div className="w-full max-w-screen-lg md:max-w-[800px] lg:max-w-[1000px] mx-auto p-4">
+          <Hero
+            title="Wandmalerei, Murals und Fassadengestaltung"
+            subtitle="von Tamy Luga"
+          />
           <Me />
           <Gallery />
           <ContactForm />

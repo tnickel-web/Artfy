@@ -27,6 +27,7 @@ import sos5 from "/bilder/sos5.jpg";
 import sos6 from "/bilder/sos6.jpg";
 import sos7 from "/bilder/sos7.jpg";
 import sos8 from "/bilder/sos8.jpg";
+import mermaidImg from "/bilder/mermaid.jpg";
 
 export interface Image {
   src: string;
@@ -215,5 +216,10 @@ export const images: Image[] = [
     src: houseWallImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von Gänseblümchen an Hauswand (Musterfoto)",
+  },
+  {
+    src: mermaidImg,
+    category: ImageCategory.Other,
+    alt: "Meerjungfrau",
   },
 ];

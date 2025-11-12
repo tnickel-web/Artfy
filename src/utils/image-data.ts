@@ -18,7 +18,6 @@ import musterImg from "/bilder/muster.jpg";
 import squidImg from "/bilder/squid.jpg";
 import bigLeafImg from "/bilder/big-leaf.jpg";
 import houseWallImg from "/bilder/house-wall.jpg";
-import legoImg from "/bilder/lego.jpg";
 import sos1 from "/bilder/sos1.jpg";
 import sos2 from "/bilder/sos2.jpg";
 import sos3 from "/bilder/sos3.jpg";
@@ -88,11 +87,6 @@ export const images: Image[] = [
     src: rochenImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Rochen",
-  },
-  {
-    src: legoImg,
-    category: ImageCategory.Kids,
-    alt: "Wandbild Lego Ninjas",
   },
   // BUSINESS
   {

@@ -4,7 +4,7 @@ import Gallery from "../Components/Gallery.tsx";
 import { Me } from "../Components/Me.tsx";
 import Navigation from "../Components/Navigation.tsx";
 import PersonalInformation from "../utils/personal-information.ts";
-import headerImg from "/Header.png";
+import headerImg from "@/assets/Header.png";
 import titelUnterImg from "/titel_unter_alt.png";
 import Hero from "@/Components/Hero.tsx";
 

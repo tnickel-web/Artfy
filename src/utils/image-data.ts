@@ -17,6 +17,7 @@ import tabaklagerImg from "/bilder/tabaklager.jpg";
 import musterImg from "/bilder/muster.jpg";
 import squidImg from "/bilder/squid.jpg";
 import bigLeafImg from "/bilder/big-leaf.jpg";
+import bigLeaf2Img from "/bilder/big-leaf2.jpg";
 import houseWallImg from "/bilder/house-wall.jpg";
 import sos1 from "/bilder/sos1.jpg";
 import sos2 from "/bilder/sos2.jpg";
@@ -27,6 +28,7 @@ import sos6 from "/bilder/sos6.jpg";
 import sos7 from "/bilder/sos7.jpg";
 import sos8 from "/bilder/sos8.jpg";
 import mermaidImg from "/bilder/mermaid.jpg";
+import underwaterWomanImg from "/bilder/underwater-woman.jpg";
 
 export interface Image {
   src: string;
@@ -43,6 +45,11 @@ export enum ImageCategory {
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: bigLeaf2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
   {
     src: gymImg,
     category: ImageCategory.Kids,
@@ -161,6 +168,11 @@ export const images: Image[] = [
     alt: "Flur Federn (SOS-Kinderdorf)",
   },
   // OTHER
+  {
+    src: underwaterWomanImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von blonder Frau unter Wasser",
+  },
   {
     src: sunflowerImg,
     category: ImageCategory.Other,

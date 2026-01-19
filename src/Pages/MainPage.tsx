@@ -4,20 +4,25 @@ import Gallery from "../Components/Gallery.tsx";
 import { Me } from "../Components/Me.tsx";
 import Navigation from "../Components/Navigation.tsx";
 import PersonalInformation from "../utils/personal-information.ts";
+import backgroundImage from "@/assets/bg-new.jpg";
 import headerImg from "@/assets/Header.png";
 import titelUnterImg from "/titel_unter_alt.png";
 import Hero from "@/Components/Hero.tsx";
 
 export default function App(): React.ReactElement {
   return (
-    <div
-      className="min-h-screen flex flex-col lg:bg-cover bg-no-repeat bg-fixed relative"
-      style={{
-        backgroundImage: "url('bg-new.jpg')",
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-0 pointer-events-none"></div>
+    <div className="min-h-screen flex flex-col relative">
+      <div
+        className="fixed inset-0 z-0 bg-no-repeat bg-left-top bg-cover"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          height: "100vh",
+          width: "100vw",
+        }}
+      />
+
+      {/* Dark overlay - also fixed */}
+      <div className="fixed inset-0 bg-black bg-opacity-0 pointer-events-none z-1"></div>
 
       {/* Content with higher z-index */}
       <div className="relative z-10 flex flex-col min-h-screen">

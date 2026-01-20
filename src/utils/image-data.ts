@@ -51,199 +51,199 @@ export const images: Image[] = [
   {
     src: bigLeaf2Img,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: bigLeaf5Img,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: gymImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)"
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
   },
   {
     src: spaceImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Weltraum"
+    alt: "Wandmalerei von Weltraum",
   },
   {
     src: unicornImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Einhorn"
+    alt: "Wandmalerei von Einhorn",
   },
   {
     src: bigLeaf3Img,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: waldImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Wald"
+    alt: "Wandmalerei von Wald",
   },
   {
     src: whale2Img,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Wal"
+    alt: "Wandmalerei von Wal",
   },
   {
     src: kidsRoomImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)"
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
   },
   {
     src: bigLeaf4Img,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: featherImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Feder (SOS-Kinderdorf)"
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
   },
   {
     src: bigLeafImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: rochenImg,
     category: ImageCategory.Kids,
-    alt: "Wandmalerei von Rochen"
+    alt: "Wandmalerei von Rochen",
   },
   // BUSINESS
   {
     src: rochenImg,
     category: ImageCategory.Business,
-    alt: "Wandmalerei von Rochen"
+    alt: "Wandmalerei von Rochen",
   },
   {
     src: bigLeafImg,
     category: ImageCategory.Business,
-    alt: "Wandmalerei von großem Blatt"
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: tabaklagerImg,
     category: ImageCategory.Business,
-    alt: "Wandmalerei in Tabaklager"
+    alt: "Wandmalerei in Tabaklager",
   },
   // SOS-Kinderdorf
   {
     src: gymImg,
     category: ImageCategory.SOS,
-    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)"
+    alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
   },
   {
     src: kidsRoomImg,
     category: ImageCategory.SOS,
-    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)"
+    alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
   },
   {
     src: featherImg,
     category: ImageCategory.SOS,
-    alt: "Wandmalerei von Feder (SOS-Kinderdorf)"
+    alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
   },
   {
     src: sos1,
     category: ImageCategory.SOS,
-    alt: "Willkommensbereich Federn (SOS-Kinderdorf)"
+    alt: "Willkommensbereich Federn (SOS-Kinderdorf)",
   },
   {
     src: sos2,
     category: ImageCategory.SOS,
-    alt: "Flur Federn (SOS-Kinderdorf)"
+    alt: "Flur Federn (SOS-Kinderdorf)",
   },
   {
     src: sos3,
     category: ImageCategory.SOS,
-    alt: "Tür Federn (SOS-Kinderdorf)"
+    alt: "Tür Federn (SOS-Kinderdorf)",
   },
   {
     src: sos4,
     category: ImageCategory.SOS,
-    alt: "Essensbereich Federn (SOS-Kinderdorf)"
+    alt: "Essensbereich Federn (SOS-Kinderdorf)",
   },
   {
     src: sos5,
     category: ImageCategory.SOS,
-    alt: "Kreativraum Federn (SOS-Kinderdorf)"
+    alt: "Kreativraum Federn (SOS-Kinderdorf)",
   },
   {
     src: sos6,
     category: ImageCategory.SOS,
-    alt: "Tür Federn (SOS-Kinderdorf)"
+    alt: "Tür Federn (SOS-Kinderdorf)",
   },
   {
     src: sos7,
     category: ImageCategory.SOS,
-    alt: "Sportraum Federn (SOS-Kinderdorf)"
+    alt: "Sportraum Federn (SOS-Kinderdorf)",
   },
   {
     src: sos8,
     category: ImageCategory.SOS,
-    alt: "Flur Federn (SOS-Kinderdorf)"
+    alt: "Flur Federn (SOS-Kinderdorf)",
   },
   // OTHER
   {
     src: underwaterWomanImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von blonder Frau unter Wasser"
+    alt: "Wandmalerei von blonder Frau unter Wasser",
   },
   {
     src: sunflowerImg,
     category: ImageCategory.Other,
-    alt: "Malerei von Sonnenblume"
+    alt: "Malerei von Sonnenblume",
   },
   {
     src: whiskeyImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Whiskey"
+    alt: "Wandmalerei von Whiskey",
   },
   {
     src: leavesImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Blätter"
+    alt: "Wandmalerei von Blätter",
   },
   {
     src: whaleImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Wal"
+    alt: "Wandmalerei von Wal",
   },
   {
     src: whale3Img,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Wal 3"
+    alt: "Wandmalerei von Wal 3",
   },
   {
     src: octopusImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Oktopus"
+    alt: "Wandmalerei von Oktopus",
   },
   {
     src: sunflower2Img,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Sonnenblume 2"
+    alt: "Wandmalerei von Sonnenblume 2",
   },
   {
     src: musterImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei (Musterfoto)"
+    alt: "Wandmalerei (Musterfoto)",
   },
   {
     src: squidImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Tintenfisch"
+    alt: "Wandmalerei von Tintenfisch",
   },
   {
     src: houseWallImg,
     category: ImageCategory.Other,
-    alt: "Wandmalerei von Gänseblümchen an Hauswand (Musterfoto)"
+    alt: "Wandmalerei von Gänseblümchen an Hauswand (Musterfoto)",
   },
   {
     src: mermaidImg,
     category: ImageCategory.Other,
-    alt: "Meerjungfrau"
-  }
+    alt: "Meerjungfrau",
+  },
 ];

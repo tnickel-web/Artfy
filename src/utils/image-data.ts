@@ -1,5 +1,8 @@
 import bigLeafImg from "@/assets/images/big-leaf.jpg";
 import bigLeaf2Img from "@/assets/images/big-leaf2.jpg";
+import bigLeaf3Img from "@/assets/images/big-leaf3.jpg";
+import bigLeaf4Img from "@/assets/images/big-leaf4.jpg";
+import bigLeaf5Img from "@/assets/images/big-leaf5.jpg";
 import featherImg from "@/assets/images/feather.jpg";
 import gymImg from "@/assets/images/gym.jpg";
 import houseWallImg from "@/assets/images/house-wall.jpg";
@@ -51,6 +54,11 @@ export const images: Image[] = [
     alt: "Wandmalerei von großem Blatt",
   },
   {
+    src: bigLeaf5Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
     src: gymImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei in Turnraum (SOS-Kinderdorf)",
@@ -66,6 +74,11 @@ export const images: Image[] = [
     alt: "Wandmalerei von Einhorn",
   },
   {
+    src: bigLeaf3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
     src: waldImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Wald",
@@ -79,6 +92,11 @@ export const images: Image[] = [
     src: kidsRoomImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: bigLeaf4Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: featherImg,

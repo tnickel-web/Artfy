@@ -8,6 +8,7 @@ import backgroundImage from "@/assets/bg-new.jpg";
 import headerImg from "@/assets/Header.png";
 import titelUnterImg from "/titel_unter_alt.png";
 import Hero from "@/Components/Hero.tsx";
+import InfoBar from "@/Components/InfoBar.tsx";
 
 export default function App(): React.ReactElement {
   return (
@@ -26,6 +27,7 @@ export default function App(): React.ReactElement {
 
       {/* Content with higher z-index */}
       <div className="relative z-10 flex flex-col min-h-screen">
+        <InfoBar />
         <Header />
         <Navigation />
         <MainContent />

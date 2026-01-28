@@ -6,18 +6,18 @@ type InfoBarProps = {
 };
 
 const InfoBar = ({
-  message = (
-    <>
-      <strong>Info:</strong> Von <strong>Mai 2026 bis Januar 2027</strong>{" "}
-      befinde ich mich im Ausland und bin in dieser Zeit per E-Mail für
-      Entwürfe, Skizzen und Planungen erreichbar. Aufträge mit Ausführung können
-      noch bis einschließlich April umgesetzt werden. Die Umsetzung neuer
-      Projekte ist wieder ab <strong>Februar 2027</strong> möglich. Frühzeitige
-      Anfragen sind jederzeit willkommen.
-    </>
-  ),
-  hideAfterDate = "2027-02-01",
-}: InfoBarProps): React.ReactElement | null => {
+                   message = (
+                     <>
+                       <strong>Info:</strong> Von <strong>Mai 2026 bis Januar 2027</strong>{" "}
+                       befinde ich mich im Ausland und bin in dieser Zeit per E-Mail für
+                       Entwürfe, Skizzen und Planungen erreichbar. Aufträge mit Ausführung können
+                       noch bis einschließlich April umgesetzt werden. Die Umsetzung neuer
+                       Projekte ist wieder ab <strong>Februar 2027</strong> möglich. Frühzeitige
+                       Anfragen sind jederzeit willkommen.
+                     </>
+                   ),
+                   hideAfterDate = "2027-02-01"
+                 }: InfoBarProps): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const shouldHideByDate = useMemo(() => {
@@ -35,6 +35,7 @@ const InfoBar = ({
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
 
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -44,7 +45,8 @@ const InfoBar = ({
 
   return (
     <div className="fixed bottom-4 left-1/2 z-40 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2">
-      <div className="flex items-center gap-3 rounded-md border border-orange-200 bg-white/90 px-8 py-8 shadow-lg backdrop-blur">
+      <div
+        className="flex items-center gap-3 rounded-md border border-orange-200 bg-white/90 px-8 py-8 shadow-lg backdrop-blur">
         <span className="text-sm text-slate-700">{message}</span>
         <button
           type="button"

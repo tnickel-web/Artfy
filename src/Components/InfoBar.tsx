@@ -45,7 +45,7 @@ const InfoBar = ({
 
   return (
     <div className="fixed bottom-4 left-1/2 z-40 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2">
-      <div className="flex items-center gap-3 rounded-md border border-orange-200 bg-white/90 px-8 py-8 shadow-lg backdrop-blur">
+      <div className="flex items-center gap-3 rounded-md border border-orange-200 bg-white/90 px-4 py-4 shadow-lg backdrop-blur">
         <span className="text-sm text-slate-700">{message}</span>
         <button
           type="button"

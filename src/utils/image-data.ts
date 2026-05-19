@@ -17,6 +17,9 @@ import leavesImg from "@/assets/images/leaves.jpg";
 import mermaidImg from "@/assets/images/mermaid.jpg";
 import muschelKopfImg from "@/assets/images/Muschelkopf.jpg";
 import musterImg from "@/assets/images/muster.jpg";
+import notesImg from "@/assets/images/notes.jpg";
+import notes2Img from "@/assets/images/notes2.jpg";
+import notes3Img from "@/assets/images/notes3.jpg";
 import octopusImg from "@/assets/images/octopus.jpg";
 import pilzImg from "@/assets/images/Pilz.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
@@ -55,6 +58,11 @@ export enum ImageCategory {
 export const images: Image[] = [
   // KIDS
   {
+    src: notesImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
     src: bigLeaf2Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
@@ -80,6 +88,11 @@ export const images: Image[] = [
     alt: "Wandmalerei von Einhorn",
   },
   {
+    src: notes2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
     src: bigLeaf3Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
@@ -98,6 +111,11 @@ export const images: Image[] = [
     src: kidsRoomImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
+  },
+  {
+    src: notes3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
   },
   {
     src: bigLeaf4Img,

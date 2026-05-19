@@ -96,7 +96,9 @@ function Footer(): React.ReactElement {
             </div>
             <div className="mb-2">
               <h4 className="font-medium">Anschrift:</h4>
-              <p>Meyerstraße 31 / 33, 28201 Bremen, Deutschland</p>
+              <p>Bremer Kunst Werke </p>
+              <p>Hastedter Osterdeich 250</p>
+              <p>28207 Bremen, Deutschland</p>
             </div>
           </div>
 

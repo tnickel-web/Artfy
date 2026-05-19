@@ -12,11 +12,11 @@ const InfoBar = ({
       befinde ich mich im Ausland und bin in dieser Zeit per E-Mail für
       Entwürfe, Skizzen und Planungen erreichbar. Aufträge mit Ausführung können
       noch bis einschließlich April umgesetzt werden. Die Umsetzung neuer
-      Projekte ist wieder ab <strong>Februar 2027</strong> möglich. Frühzeitige
+      Projekte ist wieder ab <strong>März 2027</strong> möglich. Frühzeitige
       Anfragen sind jederzeit willkommen.
     </>
   ),
-  hideAfterDate = "2027-02-01",
+  hideAfterDate = "2027-03-01",
 }: InfoBarProps): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(true);
   const [isAtBottom, setIsAtBottom] = useState(false);

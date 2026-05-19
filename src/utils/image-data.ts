@@ -22,7 +22,6 @@ import sos7 from "@/assets/images/sos7.jpg";
 import sos8 from "@/assets/images/sos8.jpg";
 import spaceImg from "@/assets/images/space.jpg";
 import squidImg from "@/assets/images/squid.jpg";
-import sunflowerImg from "@/assets/images/sunflower.jpg";
 import sunflower2Img from "@/assets/images/sunflower2.jpg";
 import tabaklagerImg from "@/assets/images/tabaklager.jpg";
 import underwaterWomanImg from "@/assets/images/underwater-woman.jpg";
@@ -31,7 +30,14 @@ import waldImg from "@/assets/images/wald.jpg";
 import whaleImg from "@/assets/images/whale.jpg";
 import whale2Img from "@/assets/images/whale2.jpg";
 import whale3Img from "@/assets/images/whale3.jpg";
-import whiskeyImg from "@/assets/images/whiskey.jpg";
+
+import fishBlueImg from "@/assets/images/Fisch-blau.jpg";
+import fishBlue2Img from "@/assets/images/Fisch-blau2.jpg";
+import fishPinkImg from "@/assets/images/Fisch-pink.jpg";
+import fishPink2Img from "@/assets/images/Fisch-pink2.jpg";
+import kaeferImg from "@/assets/images/Kaefer.jpg";
+import kaefer2Img from "@/assets/images/Kaefer2.jpg";
+import pilzImg from "@/assets/images/Pilz.jpg";
 
 export interface Image {
   src: string;
@@ -42,7 +48,7 @@ export interface Image {
 export enum ImageCategory {
   Kids = "Kinderzimmer & Kitas",
   SOS = "SOS-Kinderdorf",
-  Other = "Wohnräume, Street Art und Muster",
+  Other = "Freie Arbeiten & Urban Art",
   Business = "Geschäftsräume & Lagerhallen",
 }
 
@@ -187,19 +193,44 @@ export const images: Image[] = [
   },
   // OTHER
   {
+    src: pilzImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von lila Pilz & Gesicht",
+  },
+  {
+    src: fishBlueImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von blauem Fisch",
+  },
+  {
+    src: fishBlue2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von blauem Fisch",
+  },
+  {
+    src: fishPinkImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: fishPink2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: kaeferImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: kaefer2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
     src: underwaterWomanImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von blonder Frau unter Wasser",
-  },
-  {
-    src: sunflowerImg,
-    category: ImageCategory.Other,
-    alt: "Malerei von Sonnenblume",
-  },
-  {
-    src: whiskeyImg,
-    category: ImageCategory.Other,
-    alt: "Wandmalerei von Whiskey",
   },
   {
     src: leavesImg,

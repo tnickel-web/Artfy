@@ -26,6 +26,7 @@ import rainbowImg from "@/assets/images/rainbow.jpg";
 import rainbow2Img from "@/assets/images/rainbow2.jpg";
 import rainbow3Img from "@/assets/images/rainbow3.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
+import schuppenImg from "@/assets/images/schuppen.jpg";
 import sos1 from "@/assets/images/sos1.jpg";
 import sos2 from "@/assets/images/sos2.jpg";
 import sos3 from "@/assets/images/sos3.jpg";
@@ -60,6 +61,11 @@ export enum ImageCategory {
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: schuppenImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Pflanzen & Himmel an Schuppenaußenwand",
+  },
   {
     src: rainbowImg,
     category: ImageCategory.Kids,

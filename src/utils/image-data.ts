@@ -3,15 +3,32 @@ import bigLeaf2Img from "@/assets/images/big-leaf2.jpg";
 import bigLeaf3Img from "@/assets/images/big-leaf3.jpg";
 import bigLeaf4Img from "@/assets/images/big-leaf4.jpg";
 import bigLeaf5Img from "@/assets/images/big-leaf5.jpg";
+import crabImg from "@/assets/images/crab.jpg";
 import featherImg from "@/assets/images/feather.jpg";
+import fishBlueImg from "@/assets/images/Fisch-blau.jpg";
+import fishBlue2Img from "@/assets/images/Fisch-blau2.jpg";
+import fishPinkImg from "@/assets/images/Fisch-pink.jpg";
+import fishPink2Img from "@/assets/images/Fisch-pink2.jpg";
 import gymImg from "@/assets/images/gym.jpg";
 import houseWallImg from "@/assets/images/house-wall.jpg";
+import kaeferImg from "@/assets/images/Kaefer.jpg";
+import kaefer2Img from "@/assets/images/Kaefer2.jpg";
 import kidsRoomImg from "@/assets/images/kids_room.jpg";
 import leavesImg from "@/assets/images/leaves.jpg";
 import mermaidImg from "@/assets/images/mermaid.jpg";
+import muschelKopfImg from "@/assets/images/Muschelkopf.jpg";
 import musterImg from "@/assets/images/muster.jpg";
+import notesImg from "@/assets/images/notes.jpg";
+import notes2Img from "@/assets/images/notes2.jpg";
+import notes3Img from "@/assets/images/notes3.jpg";
 import octopusImg from "@/assets/images/octopus.jpg";
+import pilzImg from "@/assets/images/Pilz.jpg";
+import rainbowImg from "@/assets/images/rainbow.jpg";
+import rainbow2Img from "@/assets/images/rainbow2.jpg";
+import rainbow3Img from "@/assets/images/rainbow3.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
+import schiffImg from "@/assets/images/schiff.jpg";
+import schuppenImg from "@/assets/images/schuppen.jpg";
 import sos1 from "@/assets/images/sos1.jpg";
 import sos2 from "@/assets/images/sos2.jpg";
 import sos3 from "@/assets/images/sos3.jpg";
@@ -22,7 +39,7 @@ import sos7 from "@/assets/images/sos7.jpg";
 import sos8 from "@/assets/images/sos8.jpg";
 import spaceImg from "@/assets/images/space.jpg";
 import squidImg from "@/assets/images/squid.jpg";
-import sunflowerImg from "@/assets/images/sunflower.jpg";
+import storchImg from "@/assets/images/storch.jpg";
 import sunflower2Img from "@/assets/images/sunflower2.jpg";
 import tabaklagerImg from "@/assets/images/tabaklager.jpg";
 import underwaterWomanImg from "@/assets/images/underwater-woman.jpg";
@@ -31,7 +48,7 @@ import waldImg from "@/assets/images/wald.jpg";
 import whaleImg from "@/assets/images/whale.jpg";
 import whale2Img from "@/assets/images/whale2.jpg";
 import whale3Img from "@/assets/images/whale3.jpg";
-import whiskeyImg from "@/assets/images/whiskey.jpg";
+import wieseImg from "@/assets/images/wiese.jpg";
 
 export interface Image {
   src: string;
@@ -42,12 +59,53 @@ export interface Image {
 export enum ImageCategory {
   Kids = "Kinderzimmer & Kitas",
   SOS = "SOS-Kinderdorf",
-  Other = "Wohnräume, Street Art und Muster",
+  Other = "Freie Arbeiten & Urban Art",
   Business = "Geschäftsräume & Lagerhallen",
 }
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: wieseImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wiese mit Sonne und Schafen in Wolke",
+  },
+  {
+    src: schiffImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Schiff in Wolke",
+  },
+  {
+    src: crabImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Krabbe in Wolke",
+  },
+
+  {
+    src: schuppenImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Pflanzen & Himmel an Schuppenaußenwand",
+  },
+  {
+    src: rainbowImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen über Tür",
+  },
+  {
+    src: rainbow2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen auf Schuppenwand",
+  },
+  {
+    src: rainbow3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen auf Schuppenwand",
+  },
+  {
+    src: notesImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
   {
     src: bigLeaf2Img,
     category: ImageCategory.Kids,
@@ -74,6 +132,11 @@ export const images: Image[] = [
     alt: "Wandmalerei von Einhorn",
   },
   {
+    src: notes2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
     src: bigLeaf3Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
@@ -94,6 +157,11 @@ export const images: Image[] = [
     alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
   },
   {
+    src: notes3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
     src: bigLeaf4Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
@@ -112,6 +180,11 @@ export const images: Image[] = [
     src: rochenImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Rochen",
+  },
+  {
+    src: storchImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Storch",
   },
   // BUSINESS
   {
@@ -187,19 +260,49 @@ export const images: Image[] = [
   },
   // OTHER
   {
+    src: pilzImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von lila Pilz & Gesicht",
+  },
+  {
+    src: muschelKopfImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Frau unter Wasser mit Muschel als Haar",
+  },
+  {
+    src: fishBlueImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von blauem Fisch",
+  },
+  {
+    src: fishBlue2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von blauem Fisch",
+  },
+  {
+    src: fishPinkImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: fishPink2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: kaeferImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
+    src: kaefer2Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von pinkem Fisch",
+  },
+  {
     src: underwaterWomanImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von blonder Frau unter Wasser",
-  },
-  {
-    src: sunflowerImg,
-    category: ImageCategory.Other,
-    alt: "Malerei von Sonnenblume",
-  },
-  {
-    src: whiskeyImg,
-    category: ImageCategory.Other,
-    alt: "Wandmalerei von Whiskey",
   },
   {
     src: leavesImg,

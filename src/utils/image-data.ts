@@ -3,6 +3,7 @@ import bigLeaf2Img from "@/assets/images/big-leaf2.jpg";
 import bigLeaf3Img from "@/assets/images/big-leaf3.jpg";
 import bigLeaf4Img from "@/assets/images/big-leaf4.jpg";
 import bigLeaf5Img from "@/assets/images/big-leaf5.jpg";
+import crabImg from "@/assets/images/crab.jpg";
 import featherImg from "@/assets/images/feather.jpg";
 import fishBlueImg from "@/assets/images/Fisch-blau.jpg";
 import fishBlue2Img from "@/assets/images/Fisch-blau2.jpg";
@@ -26,6 +27,7 @@ import rainbowImg from "@/assets/images/rainbow.jpg";
 import rainbow2Img from "@/assets/images/rainbow2.jpg";
 import rainbow3Img from "@/assets/images/rainbow3.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
+import schiffImg from "@/assets/images/schiff.jpg";
 import schuppenImg from "@/assets/images/schuppen.jpg";
 import sos1 from "@/assets/images/sos1.jpg";
 import sos2 from "@/assets/images/sos2.jpg";
@@ -45,6 +47,7 @@ import waldImg from "@/assets/images/wald.jpg";
 import whaleImg from "@/assets/images/whale.jpg";
 import whale2Img from "@/assets/images/whale2.jpg";
 import whale3Img from "@/assets/images/whale3.jpg";
+import wieseImg from "@/assets/images/wiese.jpg";
 
 export interface Image {
   src: string;
@@ -61,6 +64,22 @@ export enum ImageCategory {
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: wieseImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Wiese mit Sonne und Schafen in Wolke",
+  },
+  {
+    src: schiffImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Schiff in Wolke",
+  },
+  {
+    src: crabImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Krabbe in Wolke",
+  },
+
   {
     src: schuppenImg,
     category: ImageCategory.Kids,

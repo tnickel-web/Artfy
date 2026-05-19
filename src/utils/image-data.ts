@@ -22,6 +22,9 @@ import notes2Img from "@/assets/images/notes2.jpg";
 import notes3Img from "@/assets/images/notes3.jpg";
 import octopusImg from "@/assets/images/octopus.jpg";
 import pilzImg from "@/assets/images/Pilz.jpg";
+import rainbowImg from "@/assets/images/rainbow.jpg";
+import rainbow2Img from "@/assets/images/rainbow2.jpg";
+import rainbow3Img from "@/assets/images/rainbow3.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
 import sos1 from "@/assets/images/sos1.jpg";
 import sos2 from "@/assets/images/sos2.jpg";
@@ -57,6 +60,21 @@ export enum ImageCategory {
 
 export const images: Image[] = [
   // KIDS
+  {
+    src: rainbowImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen über Tür",
+  },
+  {
+    src: rainbow2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen auf Schuppenwand",
+  },
+  {
+    src: rainbow3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen auf Schuppenwand",
+  },
   {
     src: notesImg,
     category: ImageCategory.Kids,

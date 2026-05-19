@@ -87,11 +87,6 @@ export const images: Image[] = [
     alt: "Wandmalerei von Pflanzen & Himmel an Schuppenaußenwand",
   },
   {
-    src: rainbowImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Regenbogen über Tür",
-  },
-  {
     src: rainbow2Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Regenbogen auf Schuppenwand",
@@ -102,12 +97,42 @@ export const images: Image[] = [
     alt: "Wandmalerei von Regenbogen auf Schuppenwand",
   },
   {
+    src: rainbowImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Regenbogen über Tür",
+  },
+  {
     src: notesImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
   },
   {
+    src: notes2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
+    src: notes3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
+  },
+  {
+    src: bigLeafImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
     src: bigLeaf2Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
+    src: bigLeaf3Img,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von großem Blatt",
+  },
+  {
+    src: bigLeaf4Img,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von großem Blatt",
   },
@@ -132,16 +157,6 @@ export const images: Image[] = [
     alt: "Wandmalerei von Einhorn",
   },
   {
-    src: notes2Img,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
-  },
-  {
-    src: bigLeaf3Img,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt",
-  },
-  {
     src: waldImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Wald",
@@ -157,24 +172,9 @@ export const images: Image[] = [
     alt: "Wandmalerei in Spielzimmer (SOS-Kinderdorf)",
   },
   {
-    src: notes3Img,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von Musiknoten auf Regenbogenwellen",
-  },
-  {
-    src: bigLeaf4Img,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt",
-  },
-  {
     src: featherImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Feder (SOS-Kinderdorf)",
-  },
-  {
-    src: bigLeafImg,
-    category: ImageCategory.Kids,
-    alt: "Wandmalerei von großem Blatt",
   },
   {
     src: rochenImg,

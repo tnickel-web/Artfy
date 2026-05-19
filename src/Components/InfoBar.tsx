@@ -8,7 +8,7 @@ type InfoBarProps = {
 const InfoBar = ({
   message = (
     <>
-      <strong>Info:</strong> Von <strong>Mai 2026 bis Januar 2027</strong>{" "}
+      <strong>Info:</strong> Von <strong>Mai 2026 bis Februar 2027</strong>{" "}
       befinde ich mich im Ausland und bin in dieser Zeit per E-Mail für
       Entwürfe, Skizzen und Planungen erreichbar. Aufträge mit Ausführung können
       noch bis einschließlich April umgesetzt werden. Die Umsetzung neuer

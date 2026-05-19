@@ -4,13 +4,21 @@ import bigLeaf3Img from "@/assets/images/big-leaf3.jpg";
 import bigLeaf4Img from "@/assets/images/big-leaf4.jpg";
 import bigLeaf5Img from "@/assets/images/big-leaf5.jpg";
 import featherImg from "@/assets/images/feather.jpg";
+import fishBlueImg from "@/assets/images/Fisch-blau.jpg";
+import fishBlue2Img from "@/assets/images/Fisch-blau2.jpg";
+import fishPinkImg from "@/assets/images/Fisch-pink.jpg";
+import fishPink2Img from "@/assets/images/Fisch-pink2.jpg";
 import gymImg from "@/assets/images/gym.jpg";
 import houseWallImg from "@/assets/images/house-wall.jpg";
+import kaeferImg from "@/assets/images/Kaefer.jpg";
+import kaefer2Img from "@/assets/images/Kaefer2.jpg";
 import kidsRoomImg from "@/assets/images/kids_room.jpg";
 import leavesImg from "@/assets/images/leaves.jpg";
 import mermaidImg from "@/assets/images/mermaid.jpg";
+import muschelKopfImg from "@/assets/images/Muschelkopf.jpg";
 import musterImg from "@/assets/images/muster.jpg";
 import octopusImg from "@/assets/images/octopus.jpg";
+import pilzImg from "@/assets/images/Pilz.jpg";
 import rochenImg from "@/assets/images/rochen.jpg";
 import sos1 from "@/assets/images/sos1.jpg";
 import sos2 from "@/assets/images/sos2.jpg";
@@ -30,14 +38,6 @@ import waldImg from "@/assets/images/wald.jpg";
 import whaleImg from "@/assets/images/whale.jpg";
 import whale2Img from "@/assets/images/whale2.jpg";
 import whale3Img from "@/assets/images/whale3.jpg";
-
-import fishBlueImg from "@/assets/images/Fisch-blau.jpg";
-import fishBlue2Img from "@/assets/images/Fisch-blau2.jpg";
-import fishPinkImg from "@/assets/images/Fisch-pink.jpg";
-import fishPink2Img from "@/assets/images/Fisch-pink2.jpg";
-import kaeferImg from "@/assets/images/Kaefer.jpg";
-import kaefer2Img from "@/assets/images/Kaefer2.jpg";
-import pilzImg from "@/assets/images/Pilz.jpg";
 
 export interface Image {
   src: string;
@@ -196,6 +196,11 @@ export const images: Image[] = [
     src: pilzImg,
     category: ImageCategory.Other,
     alt: "Wandmalerei von lila Pilz & Gesicht",
+  },
+  {
+    src: muschelKopfImg,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Frau unter Wasser mit Muschel als Haar",
   },
   {
     src: fishBlueImg,

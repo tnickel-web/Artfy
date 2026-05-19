@@ -39,6 +39,7 @@ import sos7 from "@/assets/images/sos7.jpg";
 import sos8 from "@/assets/images/sos8.jpg";
 import spaceImg from "@/assets/images/space.jpg";
 import squidImg from "@/assets/images/squid.jpg";
+import storchImg from "@/assets/images/storch.jpg";
 import sunflower2Img from "@/assets/images/sunflower2.jpg";
 import tabaklagerImg from "@/assets/images/tabaklager.jpg";
 import underwaterWomanImg from "@/assets/images/underwater-woman.jpg";
@@ -179,6 +180,11 @@ export const images: Image[] = [
     src: rochenImg,
     category: ImageCategory.Kids,
     alt: "Wandmalerei von Rochen",
+  },
+  {
+    src: storchImg,
+    category: ImageCategory.Kids,
+    alt: "Wandmalerei von Storch",
   },
   // BUSINESS
   {

@@ -48,6 +48,8 @@ import waldImg from "@/assets/images/wald.jpg";
 import whaleImg from "@/assets/images/whale.jpg";
 import whale2Img from "@/assets/images/whale2.jpg";
 import whale3Img from "@/assets/images/whale3.jpg";
+import whale4Img from "@/assets/images/whale4.jpg";
+import whale5Img from "@/assets/images/whale5.jpg";
 import wieseImg from "@/assets/images/wiese.jpg";
 
 export interface Image {
@@ -259,6 +261,16 @@ export const images: Image[] = [
     alt: "Flur Federn (SOS-Kinderdorf)",
   },
   // OTHER
+  {
+    src: whale4Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Wal",
+  },
+  {
+    src: whale5Img,
+    category: ImageCategory.Other,
+    alt: "Wandmalerei von Wal",
+  },
   {
     src: pilzImg,
     category: ImageCategory.Other,
